@@ -1,116 +1,138 @@
 <!DOCTYPE html>
-<!-- La langue sera définie dynamiquement par JavaScript -->
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Le titre sera aussi changé dynamiquement -->
-    <title data-key="pageTitle">Mon Portfolio Personnel</title>
+    <title data-key="pageTitle">Candice Vialette | Portfolio</title>
     
-    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     
-    <!-- Polices Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     
-    <!-- JavaScript (l'attribut 'defer' est crucial) -->
     <script src="js/main.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-links">
-                <a href="#a-propos" data-key="navAbout">À propos</a>
-                <a href="#parcours" data-key="navExperience">Parcours</a>
-                <a href="#competences" data-key="navSkills">Compétences</a>
-                <a href="#objectifs" data-key="navGoals">Objectifs</a>
-                <a href="#contact" data-key="navContact">Contact</a>
+
+    <div class="page-container">
+        <!-- Colonne de Gauche (Sidebar) -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <img src="assets/photo.jpg" alt="Photo de Candice Vialette" class="profile-picture">
+                
+                <div class="lang-switcher">
+                    <button id="lang-fr" class="active">FR</button>
+                    <span>/</span>
+                    <button id="lang-en">EN</button>
+                </div>
+
+                <section class="sidebar-section">
+                    <h2 data-key="infoTitle">Informations</h2>
+                    <ul class="contact-list">
+                        <li><strong>Tel:</strong> 07 60 11 63 36</li>
+                        <li><strong>Email:</strong> candice.vialette@gmail.com</li>
+                        <li data-key="location"><strong>Lieu:</strong> Valence</li>
+                    </ul>
+                </section>
+
+                <section class="sidebar-section">
+                    <h2 data-key="skillsTitle">Compétences</h2>
+                    <h3 data-key="softSkillsTitle">Soft Skills</h3>
+                    <ul>
+                        <li data-key="skillSoft1">Communicative</li>
+                        <li data-key="skillSoft2">Rigoureuse</li>
+                        <li data-key="skillSoft3">Dynamique</li>
+                    </ul>
+                    <h3 data-key="hardSkillsTitle">Hard Skills</h3>
+                    <ul>
+                        <li data-key="skillHard1">Windows</li>
+                        <li data-key="skillHard2">Cisco Packet Tracer</li>
+                        <li data-key="skillHard3">Python</li>
+                        <li data-key="skillHard4">Debian</li>
+                    </ul>
+                </section>
+
+                <section class="sidebar-section">
+                    <h2 data-key="interestsTitle">Centres d'intérêt</h2>
+                    <ul>
+                        <li data-key="interest1">Lecture</li>
+                        <li data-key="interest2">Voyage</li>
+                        <li data-key="interest3">Sport</li>
+                    </ul>
+                </section>
             </div>
-            <div class="lang-switcher">
-                <button id="lang-fr" class="active">FR</button>
-                <span>|</span>
-                <button id="lang-en">EN</button>
-            </div>
-        </nav>
-    </header>
+        </aside>
 
-    <main>
-        <section id="a-propos" class="hero">
-            <div class="hero-content">
-                <img src="assets/photo.jpg" alt="Photo de profil" class="profile-picture">
-                <h1 data-key="heroName">Candice VIALETTE</h1>
-                <p data-key="heroSubtitle">Je suis actuellement étudiante en deuxième année de BTS SIO en SISR (systèmes et réseaux) au lycée Algoud Laffemas. Je suis dynamique et motivée, j'aime apprendre et me dépasser. J</p>
-            </div>
-        </section>
+        <!-- Contenu Principal -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1 data-key="heroName">Candice Vialette</h1>
+                <p class="subtitle" data-key="heroSubtitle">Étudiante en informatique</p>
+                <a href="assets/CV_Candice_Vialette.pdf" target="_blank" class="cta-button" data-key="heroButton">Télécharger mon CV</a>
+            </header>
 
-        <section id="parcours" class="light-section">
-            <h2 data-key="experienceTitle">Mon parcours</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3 data-key="exp1_title">Bac général (2024)</h3>
-                    <p>> Lycée Vincent d'Indy</p>
+            <section id="profile">
+                <h2 data-key="profileTitle">Profil</h2>
+                <p data-key="profileText">Dynamique et motivée, je recherche un job d'été afin de développer mes compétences professionnelles et acquérir une expérience enrichissante. Rigoureuse et organisée, j'aime le travail en équipe et m'adapte facilement à différents environnements. Sérieuse et polyvalente, je suis prête à m'investir dans diverses missions pour apporter mon aide et apprendre de nouvelles compétences.</p>
+            </section>
+            
+            <section id="education">
+                <h2 data-key="educationTitle">Formations</h2>
+                <div class="item">
+                    <h3 data-key="edu1_title">BTS SIO SISR</h3>
+                    <p>Lycée Algoud Laffemas <span class="date" data-key="edu1_date">En cours</span></p>
                 </div>
-                <div class="timeline-item">
-                    <h3 data-key="exp2_title">Mise en rayon (2025)</h3>
-                    <p>> Leclerc</p>
+                <div class="item">
+                    <h3 data-key="edu2_title">Bac général</h3>
+                    <p>Lycée Vincent d'Indy <span class="date">2020 - 2021</span></p>
                 </div>
-                <div class="timeline-item">
-                    <h3 data-key="exp3_title">Stage de première année (2025)</h3>
-                    <p>> Megao</p>
-                </div>
-                <div class="timeline-item">
-                    <h3 data-key="exp4_title">Ramassage de petits fruits (2021-2024)</h3>
-                    <p>> GAEC de la Châtaigneraie</p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="competences" class="dark-section">
-            <h2 data-key="skillsTitle">Compétences</h2>
-            <h3 data-key="skillsSubTitle">Langages de programmation</h3>
-            <ul>
-                <li>PYTHON</li>
-                <li>JAVA</li>
-            </ul>
-        </section>
+            <section id="experience">
+                <h2 data-key="experienceTitle">Expériences Professionnelles</h2>
+                <div class="item">
+                    <h3 data-key="exp1_title">Mégao (Stage) - 2025</h3>
+                    <p data-key="exp1_desc">Développement de compétences en administration des systèmes et réseaux. Apprentissage des bonnes pratiques en entreprise et mise en application des connaissances acquises en formation.</p>
+                </div>
+                <div class="item">
+                    <h3 data-key="exp2_title">Ramassage de petits fruits (2021-2024)</h3>
+                    <p data-key="exp2_desc">GAEC de la chataigneraie. Ce travail m'a appris la patience et la minutie.</p>
+                </div>
+                <div class="item">
+                    <h3 data-key="exp3_title">Dépannage informatique (Bénévolat)</h3>
+                    <p data-key="exp3_desc">Résolution de problèmes de connectivité et configuration de PC sous Windows.</p>
+                </div>
+            </section>
 
-        <section id="objectifs" class="light-section">
-            <h2 data-key="goalsTitle">Mes réflexions et objectifs</h2>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <h3 data-key="goal1_title">Ce que j'ai aimé</h3>
-                    <p data-key="goal1_text">Ici, décrivez les expériences passées, les matières ou les projets que vous avez particulièrement appréciés et pourquoi.</p>
-                </div>
-                <div class="grid-item">
-                    <h3 data-key="goal2_title">Ce que je veux creuser</h3>
-                    <p data-key="goal2_text">Mentionnez ici les domaines, technologies ou sujets que vous souhaitez approfondir.</p>
-                </div>
-                <div class="grid-item">
-                    <h3 data-key="goal3_title">Ce que je veux faire plus tard</h3>
-                    <p data-key="goal3_text">Parlez de vos aspirations professionnelles, du type de métier ou de secteur qui vous attire.</p>
-                </div>
-                <div class="grid-item">
-                    <h3 data-key="goal4_title">Objectifs de soft skills</h3>
-                    <p data-key="goal4_text">Listez les compétences humaines (communication, travail d'équipe, etc.) que vous souhaitez développer.</p>
-                </div>
-                 <div class="grid-item">
-                    <h3 data-key="goal5_title">Parcours de certifications</h3>
-                    <p data-key="goal5_text">Indiquez ici les certifications que vous visez pour enrichir votre profil.</p>
-                </div>
-            </div>
-        </section>
+            <section id="certifications">
+                <h2 data-key="certificationsTitle">Certifications</h2>
+                 <ul>
+                    <li data-key="cert1"><strong>Cisco:</strong> CCNA, Introduction à la cybersécurité, Sécurité des terminaux</li>
+                    <li data-key="cert2"><strong>Pix</strong> (500 points)</li>
+                    <li data-key="cert3"><strong>PSC1</strong> (Premiers Secours Civiques niveau 1)</li>
+                </ul>
+            </section>
+            
+            <section id="about-me">
+                <h2 data-key="aboutMeTitle">Qui suis-je ?</h2>
+                <p data-key="aboutMeText">...</p>
+            </section>
 
-        <section id="contact" class="dark-section">
-            <h2 data-key="contactTitle">Me contacter</h2>
-            <p data-key="contactText">N'hésitez pas à me contacter pour toute opportunité ou simplement pour échanger.</p>
-            <a href="mailto:votre.email@example.com" class="cta-button" data-key="contactButton">Envoyez-moi un email</a>
-        </section>
-    </main>
+            <section id="cover-letter">
+                <h2 data-key="coverLetterTitle">Lettre de Motivation</h2>
+                <p data-key="coverLetterText">...</p>
+            </section>
 
-    <footer>
-        <p data-key="footerText">&copy; 2025 - Prénom Nom. Tous droits réservés.</p>
-    </footer>
+            <section id="future-goals">
+                 <h2 data-key="futureTitle">Ce que je veux faire plus tard</h2>
+                 <p data-key="futureText">...</p>
+            </section>
+            
+            <footer>
+                 <p data-key="footerText">&copy; 2025 - Candice Vialette. Tous droits réservés.</p>
+            </footer>
+        </main>
+    </div>
 </body>
 </html>
