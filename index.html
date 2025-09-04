@@ -15,64 +15,39 @@
     <script src="js/main.js" defer></script>
 </head>
 <body>
-
-    <div class="page-container">
-        <!-- Colonne de Gauche (Sidebar) -->
-        <aside class="sidebar">
-            <div class="sidebar-content">
-                <img src="assets/photo.jpg" alt="Photo de Candice Vialette" class="profile-picture">
-                
-                <div class="lang-switcher">
-                    <button id="lang-fr" class="active">FR</button>
-                    <span>/</span>
-                    <button id="lang-en">EN</button>
-                </div>
-
-                <section class="sidebar-section">
-                    <h2 data-key="infoTitle">Informations</h2>
-                    <ul class="contact-list">
-                        <li><i data-feather="linkedin"></i><a href="https://www.linkedin.com/in/candice-v-ba28b933b/" target="_blank" data-key="linkedin">LinkedIn</a></li>
-                        <li><i data-feather="mail"></i><a href="mailto:candice.vialette@gmail.com">candice.vialette@gmail.com</a></li>
-                        <li><i data-feather="github"></i><a href="https://github.com/candicevialette" target="_blank" data-key="github">GitHub</a></li>
-                    </ul>
-                </section>
-
-                <section class="sidebar-section">
-                    <h2 data-key="skillsTitle">Compétences</h2>
-                    <h3 data-key="softSkillsTitle">Soft Skills</h3>
-                    <ul>
-                        <li data-key="skillSoft1">Organisée</li>
-                        <li data-key="skillSoft2">Rigoureuse</li>
-                        <li data-key="skillSoft3">Dynamique</li>
-                    </ul>
-                    <h3 data-key="hardSkillsTitle">Hard Skills</h3>
-                    <ul>
-                        <li data-key="skillHard1">Windows 10, 11</li>
-                        <li data-key="skillHard2">Cisco Packet Tracer</li>
-                        <li data-key="skillHard3">Stormshield</li>
-                        <li data-key="skillHard4">Debian</li>
-                    </ul>
-                </section>
-
-                <section class="sidebar-section">
-                    <h2 data-key="interestsTitle">Centres d'intérêt</h2>
-                    <ul>
-                        <li data-key="interest1">Lecture</li>
-                        <li data-key="interest2">Voyage</li>
-                        <li data-key="interest3">Sport</li>
-                    </ul>
-                </section>
+    <header class="main-header">
+        <div class="header-content">
+            <h1 data-key="heroName">Candice Vialette</h1>
+            <div class="lang-switcher">
+                <button id="lang-fr" class="active">FR</button>
+                <span>/</span>
+                <button id="lang-en">EN</button>
             </div>
-        </aside>
+        </div>
+    </header>
 
-        <!-- Contenu Principal -->
-        <main class="main-content">
-            <header class="main-header">
-                <h1 data-key="heroName">Candice Vialette</h1>
+    <main class="content-container">
+        
+        <section class="hero-section">
+            <div class="hero-text">
                 <p class="subtitle" data-key="heroSubtitle">Étudiante en informatique</p>
                 <a href="assets/CV_Candice_Vialette.pdf" target="_blank" class="cta-button" data-key="heroButton">Télécharger mon CV</a>
-            </header>
-            
+            </div>
+            <img src="assets/photo.jpg" alt="Photo de Candice Vialette" class="profile-picture">
+        </section>
+
+        <!-- Section Coordonnées (avec le fond rose) -->
+        <section id="contact" class="accent-section">
+            <h2 data-key="infoTitle">Coordonnées</h2>
+            <div class="contact-grid">
+                <a href="https://www.linkedin.com/in/candice-v-ba28b933b/" target="_blank"><i data-feather="linkedin"></i><span data-key="linkedin">LinkedIn</span></a>
+                <a href="mailto:candice.vialette@gmail.com"><i data-feather="mail"></i><span>candice.vialette@gmail.com</span></a>
+                <a href="https://github.com/candicevialette" target="_blank"><i data-feather="github"></i><span data-key="github">GitHub</span></a>
+            </div>
+        </section>
+        
+        <!-- Contenu principal -->
+        <div class="main-content">
             <section id="about-me" class="card">
                 <h2 data-key="aboutMeTitle">Qui suis-je ?</h2>
                 <p data-key="aboutMeText1">Je suis dynamique et motivée, j'aime apprendre et me dépasser. Je m'oriente petit à petit vers les systèmes et les réseaux.</p> 
@@ -81,70 +56,52 @@
 
             <div class="grid-container">
                 <div class="card">
-                    <h2 data-key="educationTitle">Formations</h2>
-                    <div class="item">
-                        <h3 data-key="edu1_title">BTS SIO SISR</h3>
-                        <p>Lycée Algoud Laffemas <span class="date" data-key="edu1_date">En cours</span></p>
-                    </div>
-                    <div class="item">
-                        <h3 data-key="edu2_title">Bac général</h3>
-                        <p>Lycée Vincent d'Indy <span class="date">2020 - 2021</span></p>
-                    </div>
+                    <h2 data-key="skillsTitle">Compétences</h2>
+                    <h3 data-key="softSkillsTitle">Soft Skills</h3>
+                    <ul><li data-key="skillSoft1">Organisée</li><li data-key="skillSoft2">Rigoureuse</li><li data-key="skillSoft3">Dynamique</li></ul>
+                    <h3 data-key="hardSkillsTitle">Hard Skills</h3>
+                    <ul><li data-key="skillHard1">Windows 10, 11</li><li data-key="skillHard2">Cisco Packet Tracer</li><li data-key="skillHard3">Stormshield</li><li data-key="skillHard4">Debian</li></ul>
                 </div>
-                 <div class="card" id="certifications">
-                    <h2 data-key="certificationsTitle">Certifications</h2>
-                    <div class="certifications-grid">
-                        <div class="cert-column">
-                            <h3 data-key="certCol1Title">AUTRES :</h3>
-                            <p data-key="certCol1Item1">RGPD (CNIL)</p>
-                            <p data-key="certCol1Item2">Pix (500 points)</p>
-                            <p data-key="certCol1Item3">PSC1</p>
-                        </div>
-                        <div class="cert-column">
-                            <h3 data-key="certCol2Title">RÉSEAU :</h3>
-                            <p data-key="certCol2Item1">CCNA 1</p>
-                        </div>
-                        <div class="cert-column">
-                            <h3 data-key="certCol3Title">CYBERSÉCURITÉ :</h3>
-                            <p data-key="certCol3Item1">Sécurité des terminaux</p>
-                            <p data-key="certCol3Item2">Introduction à la Cybersécurité</p>
-                            <p data-key="certCol3Item3">CyberOps</p>
-                        </div>
-                    </div>
+                <div class="card">
+                    <h2 data-key="interestsTitle">Centres d'intérêt</h2>
+                    <ul><li data-key="interest1">Lecture</li><li data-key="interest2">Voyage</li><li data-key="interest3">Sport</li></ul>
                 </div>
             </div>
 
+            <section id="certifications" class="card">
+                <h2 data-key="certificationsTitle">Certifications</h2>
+                <div class="certifications-grid">
+                    <div class="cert-column"><h3 data-key="certCol1Title">AUTRES :</h3><p data-key="certCol1Item1">RGPD (CNIL)</p><p data-key="certCol1Item2">Pix (500 points)</p><p data-key="certCol1Item3">PSC1</p></div>
+                    <div class="cert-column"><h3 data-key="certCol2Title">RÉSEAU :</h3><p data-key="certCol2Item1">CCNA 1</p></div>
+                    <div class="cert-column"><h3 data-key="certCol3Title">CYBERSÉCURITÉ :</h3><p data-key="certCol3Item1">Sécurité des terminaux</p><p data-key="certCol3Item2">Introduction à la Cybersécurité</p><p data-key="certCol3Item3">CyberOps</p></div>
+                </div>
+            </section>
+            
             <section id="experience" class="card">
-                <h2 data-key="experienceTitle">Expériences Professionnelles</h2>
-                <div class="item">
-                    <h3 data-key="exp1_title">Mégao (Stage) - 2025</h3>
-                    <p data-key="exp1_desc">Développement de compétences en administration des systèmes et réseaux. Apprentissage des bonnes pratiques en entreprise et mise en application des connaissances acquises en formation.</p>
-                </div>
-                <div class="item">
-                    <h3 data-key="exp2_title">GAEC de la chataigneraie (Saisonnier) (2021-2024)</h3>
-                    <p data-key="exp2_desc">Ramassage de petits fruits. Ce travail m'a appris la patience et la minutie.</p>
-                </div>
-                <div class="item">
-                    <h3 data-key="exp3_title">Dépannage informatique (Bénévolat)</h3>
-                    <p data-key="exp3_desc">Résolution de problèmes de connectivité et configuration de PC sous Windows.</p>
-                </div>
+                <h2 data-key="experienceTitle">Formations & Expériences</h2>
+                <div class="item"><h3 data-key="edu1_title">BTS SIO SISR</h3><p>Lycée Algoud Laffemas <span class="date" data-key="edu1_date">En cours</span></p></div>
+                <div class="item"><h3 data-key="edu2_title">Bac général</h3><p>Lycée Vincent d'Indy <span class="date">2020 - 2021</span></p></div>
+                <hr>
+                <div class="item"><h3 data-key="exp1_title">Mégao (Stage) - 2025</h3><p data-key="exp1_desc">Développement de compétences en administration des systèmes et réseaux...</p></div>
+                <div class="item"><h3 data-key="exp2_title">GAEC de la chataigneraie (Saisonnier) (2021-2024)</h3><p data-key="exp2_desc">Ramassage de petits fruits. Ce travail m'a appris la patience et la minutie.</p></div>
+                <div class="item"><h3 data-key="exp3_title">Dépannage informatique (Bénévolat)</h3><p data-key="exp3_desc">Résolution de problèmes de connectivité et configuration de PC sous Windows.</p></div>
             </section>
 
             <section id="future-goals" class="card">
                  <h2 data-key="futureTitle">Ce que je veux faire plus tard</h2>
-                 <p data-key="futureText">J'aimerais continuer mes études en troisième année orientée systèmes et réseaux. J'ai vu qu'intégrer le BUT RT en 3ème année était une très belle opportunité. À terme, j'aimerais obtenir un diplôme de niveau bac +5, mon projet n'est pas encore clairement défini mais je compte sur mes expériences et rencontres pour l'affiner. J'ai déjà pu échanger avec un ingénieur (hors informatique) qui m'a présenté l'école d'ingénieur sous un autre angle.</p>
+                 <p data-key="futureText">J'aimerais continuer mes études en troisième année orientée systèmes et réseaux...</p>
             </section>
             
             <section id="cover-letter" class="card">
                 <h2 data-key="coverLetterTitle">Lettre de Motivation</h2>
                 <p data-key="coverLetterText">...</p>
             </section>
-            
-            <footer>
-                 <p data-key="footerText">&copy; 2025 - Candice Vialette. Tous droits réservés.</p>
-            </footer>
-        </main>
-    </div>
+        </div>
+    </main>
+    
+    <footer>
+         <p data-key="footerText">&copy; 2025 - Candice Vialette. Tous droits réservés.</p>
+    </footer>
 
     <script>
       feather.replace()
