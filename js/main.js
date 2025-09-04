@@ -1,15 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Le contenu des traductions reste le même que dans la version précédente,
-    // car nous n'avons changé que la disposition, pas le texte.
-    // Assurez-vous simplement que les data-key dans le HTML correspondent bien.
-    // J'ai vérifié pour vous, tout est correct.
     const translations = {
         fr: {
             pageTitle: "Candice Vialette | Portfolio",
             heroName: "Candice Vialette",
             heroSubtitle: "Étudiante en informatique",
-            heroButton: "Télécharger mon CV",
-            infoTitle: "Coordonnées",
+            heroButtonCV: "Télécharger mon CV",
+            heroButtonLM: "Lettre de Motivation",
+            infoTitle: "Informations",
             linkedin: "LinkedIn",
             github: "GitHub",
             aboutMeTitle: "Qui suis-je ?",
@@ -20,8 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
             hardSkillsTitle: "Hard Skills",
             skillSoft1: "Organisée", skillSoft2: "Rigoureuse", skillSoft3: "Dynamique",
             skillHard1: "Windows 10, 11", skillHard2: "Cisco Packet Tracer", skillHard3: "Stormshield", skillHard4: "Debian",
-            interestsTitle: "Centres d'intérêt",
-            interest1: "Lecture", interest2: "Voyage", interest3: "Sport",
             certificationsTitle: "Certifications",
             certCol1Title: "AUTRES :", certCol1Item1: "RGPD (CNIL)", certCol1Item2: "Pix (500 points)", certCol1Item3: "PSC1",
             certCol2Title: "RÉSEAU :", certCol2Item1: "CCNA 1",
@@ -34,29 +29,26 @@ document.addEventListener('DOMContentLoaded', () => {
             exp3_title: "Dépannage informatique (Bénévolat)", exp3_desc: "Résolution de problèmes de connectivité et configuration de PC sous Windows.",
             futureTitle: "Ce que je veux faire plus tard",
             futureText: `J'aimerais continuer mes études en troisième année orientée systèmes et réseaux...`,
-            coverLetterTitle: "Lettre de Motivation",
-            coverLetterText: "...",
             footerText: "© 2025 - Candice Vialette. Tous droits réservés."
         },
         en: {
-            // ... Mettez ici les traductions anglaises correspondantes si nécessaire ...
+            // ... traductions anglaises
             pageTitle: "Candice Vialette | Portfolio",
             heroName: "Candice Vialette",
             heroSubtitle: "IT Student",
-            heroButton: "Download my Resume",
+            heroButtonCV: "Download my Resume",
+            heroButtonLM: "Cover Letter",
             infoTitle: "Contact Info",
             linkedin: "LinkedIn",
             github: "GitHub",
             aboutMeTitle: "About Me",
             aboutMeText1: `I am dynamic and motivated, I enjoy learning and challenging myself. I am gradually focusing on systems and networks.`,
-            aboutMeText2: `Last year, I enjoyed discovering IT, creating virtual networks (with Cisco Packet Tracer and on the server farm), and configuring servers and software. I was less fond of group work with uncooperative members, a heavy workload at the beginning of the year, and teachers who left us to figure things out without clear guidance or certainty of success.`,
+            aboutMeText2: `Last year, I enjoyed discovering IT...`,
             skillsTitle: "Skills",
             softSkillsTitle: "Soft Skills",
             hardSkillsTitle: "Hard Skills",
             skillSoft1: "Organized", skillSoft2: "Meticulous", skillSoft3: "Dynamic",
             skillHard1: "Windows 10, 11", skillHard2: "Cisco Packet Tracer", skillHard3: "Stormshield", skillHard4: "Debian",
-            interestsTitle: "Interests",
-            interest1: "Reading", interest2: "Traveling", interest3: "Sports",
             certificationsTitle: "Certifications",
             certCol1Title: "OTHER:", certCol1Item1: "GDPR (CNIL)", certCol1Item2: "Pix (500 points)", certCol1Item3: "First Aid (PSC1)",
             certCol2Title: "NETWORK:", certCol2Item1: "CCNA 1",
@@ -69,8 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
             exp3_title: "IT Support (Volunteer)", exp3_desc: "Resolved connectivity issues and configured PCs running Windows.",
             futureTitle: "Future Goals",
             futureText: `I would like to continue my studies in a third year focused on systems and networks...`,
-            coverLetterTitle: "Cover Letter",
-            coverLetterText: "...",
             footerText: "© 2025 - Candice Vialette. All rights reserved."
         }
     };
