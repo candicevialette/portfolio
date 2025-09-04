@@ -1,0 +1,125 @@
+/* --- Variables & Styles Globaux --- */
+:root {
+    --light-bg: #F0EBE3;
+    --dark-accent: #C49991;
+    --text-color: #333;
+    --light-text: #FFFFFF;
+    --font-serif: 'Lora', serif;
+    --font-sans: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    margin: 0;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+section {
+    padding: 80px 20px;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--dark-accent);
+}
+
+.lang-switcher {
+    display: flex;
+    align-items: center;
+}
+
+.lang-switcher button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    color: #aaa;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+.lang-switcher button.active {
+    color: var(--dark-accent);
+}
+
+.lang-switcher span {
+    color: #ccc;
+    margin: 0 5px;
+}
+
+/* --- Sections --- */
+.light-section { background-color: var(--light-bg); }
+.dark-section { background-color: var(--dark-accent); color: var(--light-text); }
+.dark-section h2, .dark-section h3 { color: var(--light-text); }
+
+/* --- Section Héros --- */
+.hero { text-align: center; padding: 80px 20px; }
+.profile-picture { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 5px solid var(--dark-accent); margin-bottom: 20px; }
+.hero h1 { font-size: 3em; margin: 10px 0; }
+
+/* --- Section Parcours (Timeline) --- */
+.timeline { max-width: 800px; margin: 0 auto; }
+.timeline-item { padding: 20px; border-left: 2px solid var(--dark-accent); margin-bottom: 20px; position: relative; }
+.timeline-item:before { content: ''; display: block; width: 12px; height: 12px; border-radius: 50%; background-color: var(--dark-accent); border: 2px solid var(--light-bg); position: absolute; left: -8px; top: 25px; }
+
+/* --- Section Compétences --- */
+#competences ul { list-style: none; padding: 0; text-align: center; }
+#competences li { font-family: var(--font-serif); font-size: 1.5em; margin: 10px 0; }
+
+/* --- Section Objectifs (Grille) --- */
+.grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+.grid-item { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
+.grid-item h3 { color: var(--dark-accent); }
+
+/* --- Section Contact --- */
+#contact { text-align: center; }
+.cta-button { display: inline-block; background-color: var(--light-bg); color: var(--dark-accent); padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: bold; margin-top: 20px; transition: transform 0.3s, background-color 0.3s; }
+.cta-button:hover { background-color: #fff; transform: translateY(-3px); }
+
+/* --- Footer --- */
+footer { text-align: center; padding: 20px; background-color: #333; color: var(--light-text); }
