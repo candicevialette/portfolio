@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- La langue sera définie dynamiquement par JavaScript -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Le titre sera aussi changé dynamiquement -->
+    <title data-key="pageTitle">Mon Portfolio Personnel</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- JavaScript (l'attribut 'defer' est crucial) -->
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-links">
+                <a href="#a-propos" data-key="navAbout">À propos</a>
+                <a href="#parcours" data-key="navExperience">Parcours</a>
+                <a href="#competences" data-key="navSkills">Compétences</a>
+                <a href="#objectifs" data-key="navGoals">Objectifs</a>
+                <a href="#contact" data-key="navContact">Contact</a>
+            </div>
+            <div class="lang-switcher">
+                <button id="lang-fr" class="active">FR</button>
+                <span>|</span>
+                <button id="lang-en">EN</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="a-propos" class="hero">
+            <div class="hero-content">
+                <img src="assets/photo.jpg" alt="Photo de profil" class="profile-picture">
+                <h1 data-key="heroName">Prénom Nom</h1>
+                <p data-key="heroSubtitle">Étudiante en développement web et passionnée par les nouvelles technologies.</p>
+            </div>
+        </section>
+
+        <section id="parcours" class="light-section">
+            <h2 data-key="experienceTitle">Mon parcours</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3 data-key="exp1_title">Bac général (2024)</h3>
+                    <p>> Lycée Vincent d'Indy</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 data-key="exp2_title">Truc rayon (2025)</h3>
+                    <p>> Leclerc</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 data-key="exp3_title">Stage de première année (2025)</h3>
+                    <p>> Megao</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 data-key="exp4_title">Ramassage de petits fruits (2021-2024)</h3>
+                    <p>> GAEC de la Châtaigneraie</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="competences" class="dark-section">
+            <h2 data-key="skillsTitle">Compétences</h2>
+            <h3 data-key="skillsSubTitle">Langages de programmation</h3>
+            <ul>
+                <li>PYTHON</li>
+                <li>JAVA</li>
+            </ul>
+        </section>
+
+        <section id="objectifs" class="light-section">
+            <h2 data-key="goalsTitle">Mes réflexions et objectifs</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3 data-key="goal1_title">Ce que j'ai aimé</h3>
+                    <p data-key="goal1_text">Ici, décrivez les expériences passées, les matières ou les projets que vous avez particulièrement appréciés et pourquoi.</p>
+                </div>
+                <div class="grid-item">
+                    <h3 data-key="goal2_title">Ce que je veux creuser</h3>
+                    <p data-key="goal2_text">Mentionnez ici les domaines, technologies ou sujets que vous souhaitez approfondir.</p>
+                </div>
+                <div class="grid-item">
+                    <h3 data-key="goal3_title">Ce que je veux faire plus tard</h3>
+                    <p data-key="goal3_text">Parlez de vos aspirations professionnelles, du type de métier ou de secteur qui vous attire.</p>
+                </div>
+                <div class="grid-item">
+                    <h3 data-key="goal4_title">Objectifs de soft skills</h3>
+                    <p data-key="goal4_text">Listez les compétences humaines (communication, travail d'équipe, etc.) que vous souhaitez développer.</p>
+                </div>
+                 <div class="grid-item">
+                    <h3 data-key="goal5_title">Parcours de certifications</h3>
+                    <p data-key="goal5_text">Indiquez ici les certifications que vous visez pour enrichir votre profil.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="dark-section">
+            <h2 data-key="contactTitle">Me contacter</h2>
+            <p data-key="contactText">N'hésitez pas à me contacter pour toute opportunité ou simplement pour échanger.</p>
+            <a href="mailto:votre.email@example.com" class="cta-button" data-key="contactButton">Envoyez-moi un email</a>
+        </section>
+    </main>
+
+    <footer>
+        <p data-key="footerText">&copy; 2025 - Prénom Nom. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
