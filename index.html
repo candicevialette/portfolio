@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     
-    <!-- Ajout de Feather Icons pour les icônes -->
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="js/main.js" defer></script>
 </head>
@@ -92,14 +91,26 @@
                         <p>Lycée Vincent d'Indy <span class="date">2020 - 2021</span></p>
                     </div>
                 </div>
-                 <div class="card">
+                 <div class="card" id="certifications">
                     <h2 data-key="certificationsTitle">Certifications</h2>
-                     <ul>
-                        <li data-key="cert1"><strong>Cisco:</strong> CCNA1, Sécurité des terminaux, CyberOps</li>
-                        <li data-key="cert2"><strong>CNIL:</strong> Le RGPD</li>
-                        <li data-key="cert3"><strong>Pix</strong> (500 points)</li>
-                        <li data-key="cert4"><strong>PSC1</strong> (Premiers Secours Civiques)</li>
-                    </ul>
+                    <div class="certifications-grid">
+                        <div class="cert-column">
+                            <h3 data-key="certCol1Title">AUTRES :</h3>
+                            <p data-key="certCol1Item1">RGPD (CNIL)</p>
+                            <p data-key="certCol1Item2">Pix (500 points)</p>
+                            <p data-key="certCol1Item3">PSC1</p>
+                        </div>
+                        <div class="cert-column">
+                            <h3 data-key="certCol2Title">RÉSEAU :</h3>
+                            <p data-key="certCol2Item1">CCNA 1</p>
+                        </div>
+                        <div class="cert-column">
+                            <h3 data-key="certCol3Title">CYBERSÉCURITÉ :</h3>
+                            <p data-key="certCol3Item1">Sécurité des terminaux</p>
+                            <p data-key="certCol3Item2">Introduction à la Cybersécurité</p>
+                            <p data-key="certCol3Item3">CyberOps</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -135,7 +146,6 @@
         </main>
     </div>
 
-    <!-- Script pour activer les icônes -->
     <script>
       feather.replace()
     </script>
