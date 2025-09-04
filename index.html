@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     
+    <!-- Ajout de Feather Icons pour les icônes -->
+    <script src="https://unpkg.com/feather-icons"></script>
     <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -30,9 +32,9 @@
                 <section class="sidebar-section">
                     <h2 data-key="infoTitle">Informations</h2>
                     <ul class="contact-list">
-                        <li><strong>Linkedin:</strong>https://www.linkedin.com/in/candice-v-ba28b933b/</li>
-                        <li><strong>Email:</strong> candice.vialette@gmail.com</li>
-                        <li data-key="location"><strong>Github:</strong> https://github.com/candicevialette</li>
+                        <li><i data-feather="linkedin"></i><a href="https://www.linkedin.com/in/candice-v-ba28b933b/" target="_blank" data-key="linkedin">LinkedIn</a></li>
+                        <li><i data-feather="mail"></i><a href="mailto:candice.vialette@gmail.com">candice.vialette@gmail.com</a></li>
+                        <li><i data-feather="github"></i><a href="https://github.com/candicevialette" target="_blank" data-key="github">GitHub</a></li>
                     </ul>
                 </section>
 
@@ -40,15 +42,15 @@
                     <h2 data-key="skillsTitle">Compétences</h2>
                     <h3 data-key="softSkillsTitle">Soft Skills</h3>
                     <ul>
-                        <li data-key="skillSoft1">organisée</li>
+                        <li data-key="skillSoft1">Organisée</li>
                         <li data-key="skillSoft2">Rigoureuse</li>
                         <li data-key="skillSoft3">Dynamique</li>
                     </ul>
                     <h3 data-key="hardSkillsTitle">Hard Skills</h3>
                     <ul>
-                        <li data-key="skillHard1">Windows 10,11</li>
+                        <li data-key="skillHard1">Windows 10, 11</li>
                         <li data-key="skillHard2">Cisco Packet Tracer</li>
-                        <li data-key="skillHard3">Stormshieldfgh</li>
+                        <li data-key="skillHard3">Stormshield</li>
                         <li data-key="skillHard4">Debian</li>
                     </ul>
                 </section>
@@ -69,30 +71,47 @@
             <header class="main-header">
                 <h1 data-key="heroName">Candice Vialette</h1>
                 <p class="subtitle" data-key="heroSubtitle">Étudiante en informatique</p>
-                <a href="image/CV_Candice_Vialette.pdf" target="_blank" class="cta-button" data-key="heroButton">Télécharger mon CV</a>
+                <a href="assets/CV_Candice_Vialette.pdf" target="_blank" class="cta-button" data-key="heroButton">Télécharger mon CV</a>
             </header>
-
-                        <section id="education">
-                <h2 data-key="educationTitle">Formations</h2>
-                <div class="item">
-                    <h3 data-key="edu1_title">BTS SIO SISR</h3>
-                    <p>Lycée Algoud Laffemas <span class="date" data-key="edu1_date">En cours</span></p>
-                </div>
-                <div class="item">
-                    <h3 data-key="edu2_title">Bac général</h3>
-                    <p>Lycée Vincent d'Indy <span class="date">2020 - 2021</span></p>
-                </div>
+            
+            <section id="about-me" class="card">
+                <h2 data-key="aboutMeTitle">Qui suis-je ?</h2>
+                <p data-key="aboutMeText1">Je suis dynamique et motivée, j'aime apprendre et me dépasser. Je m'oriente petit à petit vers les systèmes et les réseaux.</p> 
+                <p data-key="aboutMeText2">L'année dernière, j'ai aimé découvrir l'informatique, créer des réseaux virtuels (sur Cisco Packet Tracer et sur la ferme des serveurs), paramétrer des serveurs, des logiciels… J'ai moins aimé le travail en groupe avec des personnes qui ne travaillaient pas beaucoup, une grosse charge de travail en début d'année et des professeurs qui nous laissent nous débrouiller sans lecon ni avec la certitude que ca marche.</p>
             </section>
 
-            <section id="experience">
+            <div class="grid-container">
+                <div class="card">
+                    <h2 data-key="educationTitle">Formations</h2>
+                    <div class="item">
+                        <h3 data-key="edu1_title">BTS SIO SISR</h3>
+                        <p>Lycée Algoud Laffemas <span class="date" data-key="edu1_date">En cours</span></p>
+                    </div>
+                    <div class="item">
+                        <h3 data-key="edu2_title">Bac général</h3>
+                        <p>Lycée Vincent d'Indy <span class="date">2020 - 2021</span></p>
+                    </div>
+                </div>
+                 <div class="card">
+                    <h2 data-key="certificationsTitle">Certifications</h2>
+                     <ul>
+                        <li data-key="cert1"><strong>Cisco:</strong> CCNA1, Sécurité des terminaux, CyberOps</li>
+                        <li data-key="cert2"><strong>CNIL:</strong> Le RGPD</li>
+                        <li data-key="cert3"><strong>Pix</strong> (500 points)</li>
+                        <li data-key="cert4"><strong>PSC1</strong> (Premiers Secours Civiques)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section id="experience" class="card">
                 <h2 data-key="experienceTitle">Expériences Professionnelles</h2>
                 <div class="item">
                     <h3 data-key="exp1_title">Mégao (Stage) - 2025</h3>
                     <p data-key="exp1_desc">Développement de compétences en administration des systèmes et réseaux. Apprentissage des bonnes pratiques en entreprise et mise en application des connaissances acquises en formation.</p>
                 </div>
                 <div class="item">
-                    <h3 data-key="exp2_title">GAEC de la chataigneraie (Ramassage de petits fruits) (2021-2024)</h3>
-                    <p data-key="exp2_desc"> Ce travail m'a appris la patience et la minutie.</p>
+                    <h3 data-key="exp2_title">GAEC de la chataigneraie (Saisonnier) (2021-2024)</h3>
+                    <p data-key="exp2_desc">Ramassage de petits fruits. Ce travail m'a appris la patience et la minutie.</p>
                 </div>
                 <div class="item">
                     <h3 data-key="exp3_title">Dépannage informatique (Bénévolat)</h3>
@@ -100,33 +119,14 @@
                 </div>
             </section>
 
-            <section id="certifications">
-                <h2 data-key="certificationsTitle">Certifications</h2>
-                 <ul>
-                    <li data-key="cert1"><strong>Cisco:</strong> CCNA1, Sécurité des terminaux, CyberOps</li>
-                     <li data-key="cert1"><strong>CNIL:</strong> Le RGPD</li>
-                    <li data-key="cert2"><strong>Pix</strong> 500 points</li>
-                    <li data-key="cert3"><strong>PSC1</strong> Premiers Secours Civiques niveau 1</li>
-                </ul>
+            <section id="future-goals" class="card">
+                 <h2 data-key="futureTitle">Ce que je veux faire plus tard</h2>
+                 <p data-key="futureText">J'aimerais continuer mes études en troisième année orientée systèmes et réseaux. J'ai vu qu'intégrer le BUT RT en 3ème année était une très belle opportunité. À terme, j'aimerais obtenir un diplôme de niveau bac +5, mon projet n'est pas encore clairement défini mais je compte sur mes expériences et rencontres pour l'affiner. J'ai déjà pu échanger avec un ingénieur (hors informatique) qui m'a présenté l'école d'ingénieur sous un autre angle.</p>
             </section>
             
-            <section id="about-me">
-                <h2 data-key="aboutMeTitle">Qui suis-je ?</h2>
-                <p data-key="aboutMeText">Je suis dynamique et motivée, j'aime apprendre et me dépasser. Je m'oriente petit à petit vers les systèmes et les réseaux.</p> 
-            <p> </div></p>
-            <p> L'année derniere, j'ai aimé découvrir l'informatique, créer des réseaux virtuels (sur Cisco Packet Tracert et sur la ferme des serveurs), paramétrer des serveurs, des logiciels…
-            <br> J'ai moins aimé le travail en groupe avec des personnes qui ne travaillait pas beaucoup, une grosse charge de travail en début d'année et des professeurs qui nous laisse nous debrouiller sans lecon ni avec la certitude que ca marche.
-</div></p>
-            </section>
-
-            <section id="cover-letter">
+            <section id="cover-letter" class="card">
                 <h2 data-key="coverLetterTitle">Lettre de Motivation</h2>
                 <p data-key="coverLetterText">...</p>
-            </section>
-
-            <section id="future-goals">
-                 <h2 data-key="futureTitle">Ce que je veux faire plus tard :</h2>
-                 <p data-key="futureText">J'aimerai continuer mes études en troisième année orienter système et réseaux, j'ai vu qu'intégrer le BUT RT 3° année était une très belle opportunité mais j'ai pas plus chercher. J'aimerai a terme continuer pour avoir un bac +5, rien de claire mais je compte sur mes coachs ingé + sur les formations. J'ai déjà discuter avec un Ingénieur (pas en informatique) qui m'a présenté sous un autre angle l'école d'Ingénieur.</p>
             </section>
             
             <footer>
@@ -134,5 +134,10 @@
             </footer>
         </main>
     </div>
+
+    <!-- Script pour activer les icônes -->
+    <script>
+      feather.replace()
+    </script>
 </body>
 </html>
