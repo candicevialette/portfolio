@@ -1,114 +1,117 @@
-// Attend que le contenu de la page soit entièrement chargé
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. DÉFINITION DES TRADUCTIONS ---
-    // C'est ici que vous gérez tout le texte de votre site.
-    // Pour ajouter du texte, ajoutez une clé ici (ex: "newText") et l'attribut data-key="newText" dans le HTML.
     const translations = {
         fr: {
-            pageTitle: "Mon Portfolio Personnel",
-            navAbout: "À propos",
-            navExperience: "Parcours",
-            navSkills: "Compétences",
-            navGoals: "Objectifs",
-            navContact: "Contact",
-            heroName: "Prénom Nom", // Remplacez par votre nom
-            heroSubtitle: "Étudiante en développement web et passionnée par les nouvelles technologies.",
-            experienceTitle: "Mon parcours",
-            exp1_title: "Bac général (2024)",
-            exp2_title: "Truc rayon (2025)",
-            exp3_title: "Stage de première année (2025)",
-            exp4_title: "Ramassage de petits fruits (2021-2024)",
+            pageTitle: "Candice Vialette | Portfolio",
+            infoTitle: "Informations",
+            location: "<strong>Lieu:</strong> Valence",
             skillsTitle: "Compétences",
-            skillsSubTitle: "Langages de programmation",
-            goalsTitle: "Mes réflexions et objectifs",
-            goal1_title: "Ce que j'ai aimé",
-            goal1_text: "Ici, décrivez les expériences passées, les matières ou les projets que vous avez particulièrement appréciés et pourquoi.",
-            goal2_title: "Ce que je veux creuser",
-            goal2_text: "Mentionnez ici les domaines, technologies ou sujets que vous souhaitez approfondir.",
-            goal3_title: "Ce que je veux faire plus tard",
-            goal3_text: "Parlez de vos aspirations professionnelles, du type de métier ou de secteur qui vous attire.",
-            goal4_title: "Objectifs de soft skills",
-            goal4_text: "Listez les compétences humaines (communication, travail d'équipe, etc.) que vous souhaitez développer.",
-            goal5_title: "Parcours de certifications",
-            goal5_text: "Indiquez ici les certifications que vous visez pour enrichir votre profil.",
-            contactTitle: "Me contacter",
-            contactText: "N'hésitez pas à me contacter pour toute opportunité ou simplement pour échanger.",
-            contactButton: "Envoyez-moi un email",
-            footerText: "© 2025 - Prénom Nom. Tous droits réservés."
+            softSkillsTitle: "Soft Skills",
+            hardSkillsTitle: "Hard Skills",
+            skillSoft1: "Communicative",
+            skillSoft2: "Rigoureuse",
+            skillSoft3: "Dynamique",
+            skillHard1: "Windows",
+            skillHard2: "Cisco Packet Tracer",
+            skillHard3: "Python",
+            skillHard4: "Debian",
+            interestsTitle: "Centres d'intérêt",
+            interest1: "Lecture",
+            interest2: "Voyage",
+            interest3: "Sport",
+            heroName: "Candice Vialette",
+            heroSubtitle: "Étudiante en informatique",
+            heroButton: "Télécharger mon CV",
+            profileTitle: "Profil",
+            profileText: "Dynamique et motivée, je recherche un job d'été afin de développer mes compétences professionnelles et acquérir une expérience enrichissante. Rigoureuse et organisée, j'aime le travail en équipe et m'adapte facilement à différents environnements. Sérieuse et polyvalente, je suis prête à m'investir dans diverses missions pour apporter mon aide et apprendre de nouvelles compétences.",
+            educationTitle: "Formations",
+            edu1_title: "BTS SIO SISR",
+            edu1_date: "En cours",
+            edu2_title: "Bac général",
+            experienceTitle: "Expériences Professionnelles",
+            exp1_title: "Mégao (Stage) - 2025",
+            exp1_desc: "Développement de compétences en administration des systèmes et réseaux. Apprentissage des bonnes pratiques en entreprise et mise en application des connaissances acquises en formation.",
+            exp2_title: "Ramassage de petits fruits (2021-2024)",
+            exp2_desc: "GAEC de la chataigneraie. Ce travail m'a appris la patience et la minutie.",
+            exp3_title: "Dépannage informatique (Bénévolat)",
+            exp3_desc: "Résolution de problèmes de connectivité et configuration de PC sous Windows.",
+            certificationsTitle: "Certifications",
+            cert1: "<strong>Cisco:</strong> CCNA, Introduction à la cybersécurité, Sécurité des terminaux",
+            cert2: "<strong>Pix</strong> (500 points)",
+            cert3: "<strong>PSC1</strong> (Premiers Secours Civiques niveau 1)",
+            aboutMeTitle: "Qui suis-je ?",
+            aboutMeText: "...",
+            coverLetterTitle: "Lettre de Motivation",
+            coverLetterText: "...",
+            futureTitle: "Ce que je veux faire plus tard",
+            futureText: "...",
+            footerText: "© 2025 - Candice Vialette. Tous droits réservés."
         },
         en: {
-            pageTitle: "My Personal Portfolio",
-            navAbout: "About",
-            navExperience: "Experience",
-            navSkills: "Skills",
-            navGoals: "Goals",
-            navContact: "Contact",
-            heroName: "Firstname Lastname", // Replace with your name
-            heroSubtitle: "Web development student and passionate about new technologies.",
-            experienceTitle: "My journey",
-            exp1_title: "General Baccalaureate (2024)",
-            exp2_title: "Shelf stocking (2025)",
-            exp3_title: "First-year internship (2025)",
-            exp4_title: "Berry picking (2021-2024)",
+            pageTitle: "Candice Vialette | Portfolio",
+            infoTitle: "Contact Info",
+            location: "<strong>Location:</strong> Valence",
             skillsTitle: "Skills",
-            skillsSubTitle: "Programming Languages",
-            goalsTitle: "My Reflections and Goals",
-            goal1_title: "What I Liked",
-            goal1_text: "Describe past experiences, subjects, or projects you particularly enjoyed and why.",
-            goal2_title: "What I Want to Explore",
-            goal2_text: "Mention the fields, technologies, or topics you want to delve into.",
-            goal3_title: "What I Want to Do Later",
-            goal3_text: "Talk about your career aspirations, the type of job or industry that attracts you.",
-            goal4_title: "Soft Skills Goals",
-            goal4_text: "List the soft skills (communication, teamwork, etc.) you want to develop.",
-            goal5_title: "Certification Path",
-            goal5_text: "Indicate the certifications you are aiming for to enhance your profile.",
-            contactTitle: "Contact Me",
-            contactText: "Feel free to contact me for any opportunities or just to connect.",
-            contactButton: "Send me an email",
-            footerText: "© 2025 - Firstname Lastname. All rights reserved."
+            softSkillsTitle: "Soft Skills",
+            hardSkillsTitle: "Hard Skills",
+            skillSoft1: "Communicative",
+            skillSoft2: "Meticulous",
+            skillSoft3: "Dynamic",
+            skillHard1: "Windows",
+            skillHard2: "Cisco Packet Tracer",
+            skillHard3: "Python",
+            skillHard4: "Debian",
+            interestsTitle: "Interests",
+            interest1: "Reading",
+            interest2: "Traveling",
+            interest3: "Sports",
+            heroName: "Candice Vialette",
+            heroSubtitle: "IT Student",
+            heroButton: "Download my Resume",
+            profileTitle: "Profile",
+            profileText: "Dynamic and motivated, I am looking for a summer job to develop my professional skills and gain an enriching experience. Meticulous and organized, I enjoy teamwork and adapt easily to different environments. Serious and versatile, I am ready to get involved in various missions to bring my help and learn new skills.",
+            educationTitle: "Education",
+            edu1_title: "HND in IT (SISR Specialization)",
+            edu1_date: "In progress",
+            edu2_title: "General Baccalaureate",
+            experienceTitle: "Professional Experience",
+            exp1_title: "Mégao (Internship) - 2025",
+            exp1_desc: "Developed skills in systems and network administration. Learned best practices in a corporate environment and applied knowledge from my studies.",
+            exp2_title: "Berry Picking (2021-2024)",
+            exp2_desc: "GAEC de la Chataigneraie. This job taught me patience and attention to detail.",
+            exp3_title: "IT Support (Volunteer)",
+            exp3_desc: "Resolved connectivity issues and configured PCs running Windows.",
+            certificationsTitle: "Certifications",
+            cert1: "<strong>Cisco:</strong> CCNA, Introduction to Cybersecurity, Endpoint Security",
+            cert2: "<strong>Pix</strong> (500 points)",
+            cert3: "<strong>PSC1</strong> (First Aid Certification)",
+            aboutMeTitle: "Who I am",
+            aboutMeText: "...",
+            coverLetterTitle: "Cover Letter",
+            coverLetterText: "...",
+            futureTitle: "Future Goals",
+            futureText: "...",
+            footerText: "© 2025 - Candice Vialette. All rights reserved."
         }
     };
 
-    // --- 2. LOGIQUE DE CHANGEMENT DE LANGUE ---
-
-    const langFrButton = document.getElementById('lang-fr');
-    const langEnButton = document.getElementById('lang-en');
-
-    // Fonction pour appliquer les traductions
     const setLanguage = (lang) => {
-        // Met à jour le texte de tous les éléments avec un attribut `data-key`
         document.querySelectorAll('[data-key]').forEach(element => {
             const key = element.getAttribute('data-key');
             if (translations[lang][key]) {
-                element.textContent = translations[lang][key];
+                // Utilise innerHTML pour interpréter les balises comme <strong>
+                element.innerHTML = translations[lang][key];
             }
         });
-
-        // Met à jour la balise `lang` de la page
         document.documentElement.lang = lang;
-
-        // Gère la classe 'active' sur les boutons
-        if (lang === 'fr') {
-            langFrButton.classList.add('active');
-            langEnButton.classList.remove('active');
-        } else {
-            langEnButton.classList.add('active');
-            langFrButton.classList.remove('active');
-        }
-        
-        // Sauvegarde le choix de la langue dans le navigateur
+        document.getElementById('lang-fr').classList.toggle('active', lang === 'fr');
+        document.getElementById('lang-en').classList.toggle('active', lang === 'en');
         localStorage.setItem('preferredLanguage', lang);
     };
 
-    // Ajoute les écouteurs d'événements sur les boutons
-    langFrButton.addEventListener('click', () => setLanguage('fr'));
-    langEnButton.addEventListener('click', () => setLanguage('en'));
+    document.getElementById('lang-fr').addEventListener('click', () => setLanguage('fr'));
+    document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
 
-    // --- 3. INITIALISATION AU CHARGEMENT DE LA PAGE ---
-
-    // Vérifie si une langue a été sauvegardée, sinon utilise la langue du navigateur, ou le français par défaut
-    const preferredLanguage = localStorage.getItem('preferredLanguage') || (navigator.language.split('-')[0] === 'fr' ? 'fr' : 'en');
+    const preferredLanguage = localStorage.getItem('preferredLanguage') || 'fr';
     setLanguage(preferredLanguage);
 });
