@@ -1,8 +1,8 @@
 /* --- Variables & Styles Globaux --- */
 :root {
-    --light-bg: #F0EBE3;
-    --dark-accent: #C49991;
-    --text-color: #333;
+    --light-bg: #F5F1ED; /* Un beige très clair */
+    --accent-color: #D3B8B3; /* Un rose poudré / vieux rose */
+    --text-color: #4A4A4A;
     --light-text: #FFFFFF;
     --font-serif: 'Lora', serif;
     --font-sans: 'Montserrat', sans-serif;
@@ -17,7 +17,7 @@ body {
     margin: 0;
     color: var(--text-color);
     background-color: var(--light-bg);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 h1, h2, h3 {
@@ -25,101 +25,169 @@ h1, h2, h3 {
     font-weight: 400;
 }
 
-h2 {
-    text-align: center;
-    font-size: 2.5em;
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* --- Mise en page principale --- */
+.page-container {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    min-height: 100vh;
+}
+
+/* --- Colonne de Gauche (Sidebar) --- */
+.sidebar {
+    background-color: var(--accent-color);
+    color: var(--light-text);
+    padding: 40px 30px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--light-text);
+    display: block;
+    margin: 0 auto 30px auto;
+}
+
+.sidebar-section {
     margin-bottom: 40px;
 }
 
-section {
-    padding: 80px 20px;
+.sidebar-section h2 {
+    font-size: 1.4em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-/* --- Header & Navigation --- */
-header {
-    background-color: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    border-bottom: 1px solid #ddd;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px 20px;
-}
-
-.nav-links a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--dark-accent);
-}
-
-.lang-switcher {
-    display: flex;
-    align-items: center;
-}
-
-.lang-switcher button {
-    background: none;
-    border: none;
-    cursor: pointer;
+.sidebar-section h3 {
     font-size: 1em;
-    font-weight: bold;
-    color: #aaa;
-    padding: 5px;
-    transition: color 0.3s;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
-.lang-switcher button.active {
-    color: var(--dark-accent);
+.sidebar-section ul li {
+    margin-bottom: 8px;
 }
 
-.lang-switcher span {
-    color: #ccc;
-    margin: 0 5px;
+.contact-list strong {
+    font-weight: 500;
 }
 
-/* --- Sections --- */
-.light-section { background-color: var(--light-bg); }
-.dark-section { background-color: var(--dark-accent); color: var(--light-text); }
-.dark-section h2, .dark-section h3 { color: var(--light-text); }
+/* --- Sélecteur de langue --- */
+.lang-switcher {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.lang-switcher button {
+    background: none; border: none; cursor: pointer;
+    font-size: 1.1em; font-weight: 500; color: rgba(255, 255, 255, 0.6);
+    padding: 5px; transition: color 0.3s;
+}
+.lang-switcher button.active { color: var(--light-text); font-weight: bold; }
+.lang-switcher span { color: rgba(255, 255, 255, 0.6); margin: 0 5px; }
 
-/* --- Section Héros --- */
-.hero { text-align: center; padding: 80px 20px; }
-.profile-picture { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 5px solid var(--dark-accent); margin-bottom: 20px; }
-.hero h1 { font-size: 3em; margin: 10px 0; }
 
-/* --- Section Parcours (Timeline) --- */
-.timeline { max-width: 800px; margin: 0 auto; }
-.timeline-item { padding: 20px; border-left: 2px solid var(--dark-accent); margin-bottom: 20px; position: relative; }
-.timeline-item:before { content: ''; display: block; width: 12px; height: 12px; border-radius: 50%; background-color: var(--dark-accent); border: 2px solid var(--light-bg); position: absolute; left: -8px; top: 25px; }
+/* --- Contenu Principal --- */
+.main-content {
+    padding: 50px 60px;
+}
 
-/* --- Section Compétences --- */
-#competences ul { list-style: none; padding: 0; text-align: center; }
-#competences li { font-family: var(--font-serif); font-size: 1.5em; margin: 10px 0; }
+.main-header {
+    margin-bottom: 50px;
+}
 
-/* --- Section Objectifs (Grille) --- */
-.grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
-.grid-item { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
-.grid-item h3 { color: var(--dark-accent); }
+.main-header h1 {
+    font-size: 3.5em;
+    margin: 0;
+    color: var(--accent-color);
+}
 
-/* --- Section Contact --- */
-#contact { text-align: center; }
-.cta-button { display: inline-block; background-color: var(--light-bg); color: var(--dark-accent); padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: bold; margin-top: 20px; transition: transform 0.3s, background-color 0.3s; }
-.cta-button:hover { background-color: #fff; transform: translateY(-3px); }
+.main-header .subtitle {
+    font-size: 1.5em;
+    margin: 5px 0 25px 0;
+    font-family: var(--font-serif);
+    font-style: italic;
+}
 
-/* --- Footer --- */
-footer { text-align: center; padding: 20px; background-color: #333; color: var(--light-text); }
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--light-text);
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #c49991; /* Un peu plus foncé */
+    transform: translateY(-3px);
+}
+
+main section {
+    margin-bottom: 40px;
+}
+
+main section h2 {
+    font-size: 2em;
+    color: var(--text-color);
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.item h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+}
+
+.item p {
+    margin: 0;
+}
+
+.date {
+    float: right;
+    font-style: italic;
+    color: #888;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #999;
+    font-size: 0.9em;
+}
+
+/* --- Responsive pour Tablettes & Mobiles --- */
+@media (max-width: 992px) {
+    .page-container {
+        grid-template-columns: 1fr;
+    }
+    .main-content {
+        padding: 40px;
+    }
+}
+@media (max-width: 576px) {
+    .main-content {
+        padding: 30px 20px;
+    }
+    .main-header h1 {
+        font-size: 2.5em;
+    }
+    .main-header .subtitle {
+        font-size: 1.2em;
+    }
+}
