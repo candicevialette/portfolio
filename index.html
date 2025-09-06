@@ -37,6 +37,7 @@
 
         <!-- Contenu principal -->
         <main>
+            <!-- Chaque section est maintenant un enfant direct de 'main' -->
             <section id="about-me" class="card">
                 <h2 data-key="aboutMeTitle">Qui suis-je ?</h2>
                 <p data-key="aboutMeText1">Je suis dynamique et motivée, j'aime apprendre et me dépasser. Je m'oriente petit à petit vers les systèmes et les réseaux.</p> 
@@ -48,8 +49,8 @@
                  <p data-key="futureText">J'aimerai continuer mes études en troisième année orienter système et réseaux, j'ai vu qu'intégrer le BUT RT 3° année était une très belle opportunité mais j'ai pas plus chercher. J'aimerai a terme continuer pour avoir un bac +5, rien de claire mais je compte sur mes coachs ingé + sur les formations. J'ai déjà discuter avec un Ingénieur (pas en informatique) qui m'a présenté sous un autre angle l'école d'Ingénieur..</p>
             </section>
             
-            <!-- CONTENEUR DE GRILLE CORRIGÉ -->
-            <div class="grid-container">
+            <!-- La grille sera gérée par le CSS sur <main> -->
+            <div class="grid-wrapper">
                 <div class="card" id="carte-infos">
                     <h2 data-key="infoTitle">Informations</h2>
                     <ul class="contact-list">
@@ -59,7 +60,7 @@
                     </ul>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="carte-competences">
                     <h2 data-key="skillsTitle">Compétences</h2>
                     <h3 data-key="softSkillsTitle">Soft Skills</h3>
                     <ul><li data-key="skillSoft1">Organisée</li><li data-key="skillSoft2">Rigoureuse</li><li data-key="skillSoft3">Dynamique</li></ul>
@@ -86,12 +87,10 @@
                 <div class="item"><h3 data-key="exp2_title">GAEC de la chataigneraie (Saisonnier) (2021-2024)</h3><p data-key="exp2_desc">Ramassage de petits fruits. Ce travail m'a appris la patience et la minutie.</p></div>
                 <div class="item"><h3 data-key="exp3_title">Dépannage informatique (Bénévolat)</h3><p data-key="exp3_desc">Résolution de problèmes de connectivité et configuration de PC sous Windows.</p></div>
             </section>
-
         </main>
     </div>
     
     <footer>
-        <!-- Vous pouvez ajouter du contenu ici, par exemple un copyright -->
     </footer>
 
     <script>
