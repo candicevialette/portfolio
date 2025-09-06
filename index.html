@@ -24,7 +24,7 @@
                 <li><a href="#about-me">Qui suis-je</a></li>
                 <li><a href="#carte-projet">Ce que je veux faire plus tard</a></li>
                 <li><a href="#info">Infos</a></li>
-		<li><a href="#skills">Compétences</a></li>
+		        <li><a href="#skills">Compétences</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#projects">Mes projets</a></li>
                 <li><a href="#experience">Formations & Expériences</a></li>
@@ -56,7 +56,7 @@
             <section id="about-me" class="card">
                 <h2 data-key="aboutMeTitle">Qui suis-je ?</h2>
                 <p data-key="aboutMeText1">Je suis dynamique et motivée, j'aime apprendre et me dépasser. Je m'oriente petit à petit vers les systèmes et les réseaux.</p> 
-                <p data-key="aboutMeText2">e suis une étudiante curieuse et déterminée, et ma première année en BTS SIO a confirmé ma passion naissante pour les systèmes et les réseaux.<br>
+                <p data-key="aboutMeText2">Je suis une étudiante curieuse et déterminée, et ma première année en BTS SIO a confirmé ma passion naissante pour les systèmes et les réseaux.<br>
 J'ai particulièrement apprécié les aspects pratiques de la formation : concevoir des architectures sur Cisco Packet Tracer, déployer des services sur des serveurs et donner vie à une infrastructure. C'est en pratiquant et faisant des erreurs que j'apprends le plus.<br>
 Cette première année a aussi été riche en défis. Face à une charge de travail importante ou à des projets où il fallait être totalement autonome, j'ai appris à m'organiser, à chercher les solutions par moi-même et à faire pour deux le travail. Ces situations, bien que parfois difficiles, m'ont surtout rendue plus efficace et plus débrouillarde.</p>
             </section>
@@ -76,8 +76,8 @@ Cette première année a aussi été riche en défis. Face à une charge de trav
                     </ul>
                 </div>
                 
-                <!-- CARTE COMPÉTENCES -->
-               <div class="card" id="skills">
+                <!-- CARTE COMPÉTENCES AVEC HTML CORRIGÉ -->
+                <div class="card" id="skills">
                     <h2 data-key="skillsTitle">Compétences</h2>
                     <h3 data-key="softSkillsTitle">Soft Skills</h3>
                     <ul>
@@ -108,22 +108,24 @@ Cette première année a aussi été riche en défis. Face à une charge de trav
                             <p>Pare-feu (Pfsense, ACLs)</p>
                             <p>Analyse de logs</p>
                             <p>Audit de sécurité</p>
-                            <p>Nmap</p>
+			                <p>Nmap</p>
                         </div>
                         <div class="skill-column">
                             <h3 data-key="skillCat3">Codage</h3>
                             <p>Python</p>
                             <p>HTML / CSS / JavaScript</p>
                         </div>
+                        <!-- CORRECTION : La div "Codage" est fermée AVANT d'ouvrir "Autre" -->
                         <div class="skill-column">
-                            <h3 data-key="skillCat5">Autre</h3>
+                            <h3 data-key="skillCat4">Autre</h3>
                             <p>RGPD</p>
                             <p>Gemini</p>
-                            <p>Chat GPT</p>
-                            <p>Github</p>
+			                <p>Chat GPT</p>
+			                <p>Github</p>
                         </div>
                     </div>
                 </div>
+            </div>
 
             <section id="certifications" class="card">
                 <h2 data-key="certificationsTitle">Certifications</h2>
@@ -136,36 +138,32 @@ Cette première année a aussi été riche en défis. Face à une charge de trav
             
              <section id="projects" class="card">
                 <h2 data-key="projectsTitle">Mes projets</h2>
-                
                 <div class="item">
                     <h3 data-key="project1_title">Montage d’un pare‑feu</h3>
                     <p data-key="project1_desc">....</p>
                     <a href="https://github.com/candicevialette/stormshield" target="_blank" class="project-link" data-key="project_link_text">Voir le projet sur GitHub <i data-feather="external-link"></i></a>
-                </div>
-                <hr>
+                </div><hr>
                 <div class="item">
                     <h3 data-key="project2_title">Site internet (en cours de réalisation)</h3>
                     <p data-key="project2_desc">Le but de cette AP est de fournir au client un developpement de son entreprise en créant un site internet pour que des nouveaux client tombent dessus, bien sur a revoir cette reformulation</p>
                     <a href="https://candicevialette.github.io/vosreves//index.html" target="_blank" class="project-link" data-key="project_link_text">Voir le site internet <i data-feather="external-link"></i></a>
-                </div>
-                <hr>
+                </div><hr>
                 <div class="item">
                     <h3 data-key="project3_title">Windows Server 2008 R2</h3>
                     <p data-key="project3_desc">Le but de ce TP était de découvrir comment parametrer un serveur et ses fonctionnalitées de base. C'est sur un serveur de 2008 car ca suffisait a ma professeur pour l'utilisation qu'on allait faire</p>
                     <a href="https://github.com/candicevialette/serveurR2008" target="_blank" class="project-link" data-key="project_link_text">Voir le projet sur GitHub <i data-feather="external-link"></i></a>
-                </div>
-                <hr>
+                </div><hr>
                 <div class="item">
                     <h3 data-key="project4_title">Analyse de risques</h3>
                     <p data-key="project4_desc">Le but de ce TP est d'apprendre à réaliser une analyse des différents facteurs de riques de piratage dans une entreprise.</p>
-                    <a href="https://github.com/candicevialette/analyse-de-risques" target="_blank" class="project-link" data-key="project_link_text">Voir le projet sur GitHub <i data-feather="external-link"></i></a>
-                </div>
-                <hr>
+                    <a href="https://github.com/candicevette/analyse-de-risques" target="_blank" class="project-link" data-key="project_link_text">Voir le projet sur GitHub <i data-feather="external-link"></i></a>
+                </div><hr>
                 <div class="item">
                     <h3 data-key="project5_title">Création d'un réseau entier sous Cisco Packet Tracert</h3>
                     <p data-key="project5_desc">Le but de ce tp est de nous apprendre à créer un réseau type assez complet de a à z.</p>
                     <a href="https://github.com/candicevialette/r-seau" target="_blank" class="project-link" data-key="project_link_text">Voir le projet sur GitHub <i data-feather="external-link"></i></a>
                 </div>
+            </section>
             
            <section id="experience" class="card">
                 <h2 data-key="experienceTitle">Formations & Expériences</h2>
@@ -181,7 +179,6 @@ ai appris à diagnostiquer et à résoudre les
 problèmes de connectivité et les pannes logicielles sur des ordinateurs Windows.
 </p></div>
             </section>
-
 
         </main>
     </div>
