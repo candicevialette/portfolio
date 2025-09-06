@@ -200,16 +200,7 @@ hr {
     margin-top: 20px; 
 }
 
-.grid-container { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 30px; 
-    align-items: start; 
-}
-
-.grid-container .card {
-    margin-bottom: 30px; 
-}
+/* LES STYLES POUR .grid-container ONT ÉTÉ SUPPRIMÉS CAR L'ÉLÉMENT N'EXISTE PLUS */
 
 /* --- Section Certifications & Compétences (Grilles) --- */
 .certifications-grid { 
@@ -218,16 +209,13 @@ hr {
     gap: 20px; 
 }
 
-/* -- AJOUTÉ -- Grille pour les Hard Skills */
 .hard-skills-grid {
     display: grid;
-    /* Crée des colonnes flexibles qui s'adaptent au nombre de catégories */
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
     gap: 20px;
     margin-top: 15px;
 }
 
-/* -- AJOUTÉ -- Style commun pour les colonnes (Certifications et Compétences) */
 .cert-column h3,
 .skill-column h3 { 
     font-family: var(--font-serif); 
@@ -244,7 +232,6 @@ hr {
     font-size: 1em; 
     margin: 5px 0; 
 }
-
 
 /* --- Section Informations (Contact) --- */
 .contact-list li { 
@@ -308,20 +295,14 @@ footer {
     .nav-links {
         display: none;
     }
-    .grid-container { 
-        grid-template-columns: 1fr; 
-    }
     .certifications-grid { 
         grid-template-columns: 1fr; 
         gap: 25px; 
     }
-    
-    /* -- AJOUTÉ -- La grille des compétences passe à 2 colonnes sur mobile */
     .hard-skills-grid {
         grid-template-columns: 1fr 1fr;
         gap: 25px;
     }
-
     .hero h1 { 
         font-size: 2.8em; 
     }
