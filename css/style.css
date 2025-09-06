@@ -54,10 +54,11 @@ hr {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* -- MODIFIÉ -- Pour que la nav-bar prenne toute la largeur */
 .navbar-container {
-    max-width: 900px;
+    /* max-width: 900px; <-- Ligne supprimée */
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px; /* Augmentation du padding pour un meilleur espacement */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,6 +82,7 @@ hr {
     padding: 8px 12px;
     border-radius: 6px;
     transition: background-color 0.3s;
+    white-space: nowrap; /* Empêche les liens de passer à la ligne */
 }
 
 .nav-links a:hover {
@@ -200,8 +202,6 @@ hr {
     margin-top: 20px; 
 }
 
-/* LES STYLES POUR .grid-container ONT ÉTÉ SUPPRIMÉS CAR L'ÉLÉMENT N'EXISTE PLUS */
-
 /* --- Section Certifications & Compétences (Grilles) --- */
 .certifications-grid { 
     display: grid; 
@@ -233,11 +233,21 @@ hr {
     margin: 5px 0; 
 }
 
+
 /* --- Section Informations (Contact) --- */
+.contact-list {
+    /* -- MODIFIÉ -- Pour centrer les informations de contact */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Ajoute un peu d'espace entre les lignes */
+    padding-top: 15px; /* Ajoute de l'espace sous le titre "Informations" */
+}
+
 .contact-list li { 
     display: flex; 
     align-items: center; 
-    margin-bottom: 15px; 
+    margin-bottom: 0; /* On retire l'ancienne marge */
 }
 
 .contact-list i { 
@@ -255,21 +265,17 @@ hr {
 .item { 
     margin-bottom: 20px; 
 }
-
 .item:last-child { 
     margin-bottom: 0; 
 }
-
 .item h3 { 
     margin: 0 0 5px 0; 
     font-size: 1.2em; 
     font-family: var(--font-serif); 
 }
-
 .item p { 
     margin: 0; 
 }
-
 .date { 
     float: right; 
     font-style: italic; 
@@ -291,10 +297,16 @@ footer {
 }
 
 /* --- Responsive --- */
-@media (max-width: 768px) {
+@media (max-width: 960px) { /* Point de rupture ajusté pour la nav-bar */
     .nav-links {
         display: none;
     }
+    .navbar-container {
+        justify-content: center; /* Centre le logo quand les liens disparaissent */
+    }
+}
+
+@media (max-width: 768px) {
     .certifications-grid { 
         grid-template-columns: 1fr; 
         gap: 25px; 
