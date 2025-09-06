@@ -11,7 +11,6 @@
 
 html { 
     scroll-behavior: smooth; 
-    /* AJOUT : Empêche les titres de se cacher sous la nav-bar lors d'un clic sur un lien */
     scroll-padding-top: 70px; 
 }
 
@@ -45,7 +44,7 @@ hr {
     margin: 25px 0; 
 }
 
-/* --- NOUVEAU : Barre de Navigation --- */
+/* --- Barre de Navigation --- */
 .navbar {
     background-color: var(--accent-color);
     padding: 10px 0;
@@ -73,7 +72,7 @@ hr {
 
 .nav-links {
     display: flex;
-    gap: 15px; /* Espace entre les liens */
+    gap: 15px;
 }
 
 .nav-links a {
@@ -212,26 +211,40 @@ hr {
     margin-bottom: 30px; 
 }
 
-/* --- Section Certifications --- */
+/* --- Section Certifications & Compétences (Grilles) --- */
 .certifications-grid { 
     display: grid; 
     grid-template-columns: repeat(3, 1fr); 
     gap: 20px; 
 }
 
-.cert-column h3 { 
+/* -- AJOUTÉ -- Grille pour les Hard Skills */
+.hard-skills-grid {
+    display: grid;
+    /* Crée des colonnes flexibles qui s'adaptent au nombre de catégories */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+    gap: 20px;
+    margin-top: 15px;
+}
+
+/* -- AJOUTÉ -- Style commun pour les colonnes (Certifications et Compétences) */
+.cert-column h3,
+.skill-column h3 { 
     font-family: var(--font-serif); 
     font-size: 1.1em; 
     color: var(--text-color); 
     margin: 0 0 10px 0; 
-    font-weight: 500; 
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.cert-column p { 
+.cert-column p,
+.skill-column p { 
     font-family: var(--font-sans); 
     font-size: 1em; 
     margin: 5px 0; 
 }
+
 
 /* --- Section Informations (Contact) --- */
 .contact-list li { 
@@ -292,7 +305,6 @@ footer {
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-    /* AJOUT : Cacher les liens de la nav-bar sur mobile */
     .nav-links {
         display: none;
     }
@@ -303,6 +315,13 @@ footer {
         grid-template-columns: 1fr; 
         gap: 25px; 
     }
+    
+    /* -- AJOUTÉ -- La grille des compétences passe à 2 colonnes sur mobile */
+    .hard-skills-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
     .hero h1 { 
         font-size: 2.8em; 
     }
