@@ -155,20 +155,20 @@ hr {
     margin-top: 20px; 
 }
 
-/* -- AJOUTÉ -- Pour augmenter la hauteur de la première carte */
-/* (N'oubliez pas d'ajouter id="carte-projet" à la div de cette carte dans votre HTML) */
-#carte-projet {
-    min-height: 100px; /* Ajustez cette valeur si nécessaire */
-}
-
 /* -- MODIFIÉ -- Pour ajuster la grille des cartes "Informations" et "Compétences" */
 .grid-container { 
     display: grid; 
     grid-template-columns: 1fr 1fr; 
     gap: 30px; 
-    align-items: start; /* Empêche les cartes de s'étirer pour avoir la même hauteur */
-    margin-bottom: 20px; /* Augmente l'espace beige sous cette section */
+    /* AJOUT : Cette ligne permet à la carte "Informations" d'être plus petite si elle a moins de contenu. */
+    align-items: start; 
 }
+
+/* -- AJOUTÉ -- Pour augmenter l'espace beige sous les cartes Informations et Compétences */
+.grid-container .card {
+    margin-bottom: 50px; /* Augmente l'espace. Vous pouvez ajuster cette valeur (ex: 60px) */
+}
+
 
 /* --- Section Certifications --- */
 .certifications-grid { 
