@@ -11,6 +11,8 @@
 
 html { 
     scroll-behavior: smooth; 
+    /* AJOUT : Empêche les titres de se cacher sous la nav-bar lors d'un clic sur un lien */
+    scroll-padding-top: 70px; 
 }
 
 body { 
@@ -42,6 +44,50 @@ hr {
     border-top: 1px solid #eee; 
     margin: 25px 0; 
 }
+
+/* --- NOUVEAU : Barre de Navigation --- */
+.navbar {
+    background-color: var(--accent-color);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--light-text);
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px; /* Espace entre les liens */
+}
+
+.nav-links a {
+    color: var(--light-text);
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 
 /* --- Conteneur Principal --- */
 .page-container { 
@@ -155,20 +201,16 @@ hr {
     margin-top: 20px; 
 }
 
-/* -- MODIFIÉ -- Pour ajuster la grille des cartes "Informations" et "Compétences" */
 .grid-container { 
     display: grid; 
     grid-template-columns: 1fr 1fr; 
     gap: 30px; 
-    /* AJOUT : Cette ligne permet à la carte "Informations" d'être plus petite si elle a moins de contenu. */
     align-items: start; 
 }
 
-/* -- AJOUTÉ -- Pour augmenter l'espace beige sous les cartes Informations et Compétences */
 .grid-container .card {
-    margin-bottom: 50px; /* Augmente l'espace. Vous pouvez ajuster cette valeur (ex: 60px) */
+    margin-bottom: 30px; 
 }
-
 
 /* --- Section Certifications --- */
 .certifications-grid { 
@@ -209,7 +251,7 @@ hr {
     color: var(--accent-color); 
 }
 
-/* --- Styles des items (Formation, Expérience) --- */
+/* --- Styles des items (Formation, Expérience, Projets) --- */
 .item { 
     margin-bottom: 20px; 
 }
@@ -234,17 +276,26 @@ hr {
     color: #888; 
 }
 
+/* --- Styles pour les liens de Projets --- */
+.project-link {
+    display: inline-block; margin-top: 10px; font-weight: 500;
+    color: var(--accent-color); text-decoration: none; transition: color 0.3s;
+}
+.project-link:hover { text-decoration: underline; color: #c49991; }
+.project-link i { width: 15px; height: 15px; vertical-align: text-bottom; margin-left: 4px; }
+
 /* --- Pied de page --- */
 footer {
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 20px;
-    background-color: var(--accent-color);
-    color: var(--light-text);
+    text-align: center; padding: 30px 20px; margin-top: 20px;
+    background-color: var(--accent-color); color: var(--light-text);
 }
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
+    /* AJOUT : Cacher les liens de la nav-bar sur mobile */
+    .nav-links {
+        display: none;
+    }
     .grid-container { 
         grid-template-columns: 1fr; 
     }
