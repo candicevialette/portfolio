@@ -55,7 +55,6 @@
         <main>
             <section id="about-me" class="card">
                 <h2 data-key="aboutMeTitle">Qui suis-je ?</h2>
-                <p data-key="aboutMeText1">Je suis dynamique et motivée, j'aime apprendre et me dépasser. Je m'oriente petit à petit vers les systèmes et les réseaux.</p> 
                 <p data-key="aboutMeText2">Je suis une étudiante curieuse et déterminée, et ma première année en BTS SIO a confirmé ma passion naissante pour les systèmes et les réseaux.<br>
 J'ai particulièrement apprécié les aspects pratiques de la formation : concevoir des architectures sur Cisco Packet Tracer, déployer des services sur des serveurs et donner vie à une infrastructure. C'est en pratiquant et faisant des erreurs que j'apprends le plus.<br>
 Cette première année a aussi été riche en défis. Face à une charge de travail importante ou à des projets où il fallait être totalement autonome, j'ai appris à m'organiser, à chercher les solutions par moi-même et à faire pour deux le travail. Ces situations, bien que parfois difficiles, m'ont surtout rendue plus efficace et plus débrouillarde.</p>
@@ -66,66 +65,63 @@ Cette première année a aussi été riche en défis. Face à une charge de trav
                  <p>J'aimerai continuer mes études en troisième année orienter système et réseaux, j'ai vu qu'intégrer le BUT RT 3° année était une très belle opportunité mais j'ai pas plus chercher. J'aimerai, à terme À plus long terme, je vise un diplôme de niveau Bac+5. Mon projet est encore en construction, mais je suis convaincue de vouloir évoluer vers des postes à plus haute technicité ou à responsabilités. Je m'informe grace à aux missions et aux personnes d'Ingé +.</p>
             </section>
             
-            <div class="grid-container" id="info">
-                <div class="card" id="carte-infos">
-                    <h2 data-key="infoTitle">Informations</h2>
-                    <ul class="contact-list">
-                        <li><a href="https://www.linkedin.com/in/candice-v-ba28b933b/" target="_blank"><i data-feather="linkedin"></i><span data-key="linkedin">LinkedIn</span></a></li>
-                        <li><a href="mailto:candice.vialette@gmail.com"><i data-feather="mail"></i><span>candice.vialette@gmail.com</span></a></li>
-                        <li><a href="https://github.com/candicevialette" target="_blank"><i data-feather="github"></i><span data-key="github">GitHub</span></a></li>
-                    </ul>
-                </div>
-                
-                <!-- CARTE COMPÉTENCES AVEC HTML CORRIGÉ -->
-                <div class="card" id="skills">
-                    <h2 data-key="skillsTitle">Compétences</h2>
-                    <h3 data-key="softSkillsTitle">Soft Skills</h3>
-                    <ul>
-                        <li data-key="skillSoft1">Organisée</li>
-                        <li data-key="skillSoft2">Rigoureuse</li>
-                        <li data-key="skillSoft3">Dynamique</li>
-                    </ul>
-                    <hr>
-                    <h3 data-key="hardSkillsTitle">Hard Skills</h3>
-                    <div class="hard-skills-grid">
-                        <div class="skill-column">
-                            <h3 data-key="skillCat1">Système</h3>
-                            <p>Windows Server (AD, GPO)</p>
-                            <p>Linux (Debian, Ubuntu)</p>
-                            <p>VMware, VirtualBox</p>
-                        </div>
-                        <div class="skill-column">
-                            <h3 data-key="skillCat2">Réseau</h3>
-                            <p>Cisco Packet Tracer</p>
-                            <p>Adressage IPv4/IPv6</p>
-                            <p>VLANs, Routage (OSPF, RIP, Static)</p>
-                            <p>Analyse (Wireshark)</p>
-                            <p>DNS, DHCP, email...</p>
-                        </div>
-                        <div class="skill-column">
-                            <h3 data-key="skillCat4">Cybersécurité</h3>
-                            <p>Stormshield</p>
-                            <p>Pare-feu (Pfsense, ACLs)</p>
-                            <p>Analyse de logs</p>
-                            <p>Audit de sécurité</p>
-			                <p>Nmap</p>
-                        </div>
-                        <div class="skill-column">
-                            <h3 data-key="skillCat3">Codage</h3>
-                            <p>Python</p>
-                            <p>HTML / CSS / JavaScript</p>
-                        </div>
-                        <!-- CORRECTION : La div "Codage" est fermée AVANT d'ouvrir "Autre" -->
-                        <div class="skill-column">
-                            <h3 data-key="skillCat4">Autre</h3>
-                            <p>RGPD</p>
-                            <p>Gemini</p>
-			                <p>Chat GPT</p>
-			                <p>Github</p>
-                        </div>
+            <!-- STRUCTURE CORRIGÉE : Le .grid-container a été supprimé -->
+            <section class="card" id="info">
+                <h2 data-key="infoTitle">Informations</h2>
+                <ul class="contact-list">
+                    <li><a href="https://www.linkedin.com/in/candice-v-ba28b933b/" target="_blank"><i data-feather="linkedin"></i><span data-key="linkedin">LinkedIn</span></a></li>
+                    <li><a href="mailto:candice.vialette@gmail.com"><i data-feather="mail"></i><span>candice.vialette@gmail.com</span></a></li>
+                    <li><a href="https://github.com/candicevialette" target="_blank"><i data-feather="github"></i><span data-key="github">GitHub</span></a></li>
+                </ul>
+            </section>
+            
+            <section class="card" id="skills">
+                <h2 data-key="skillsTitle">Compétences</h2>
+                <h3 data-key="softSkillsTitle">Soft Skills</h3>
+                <ul>
+                    <li data-key="skillSoft1">Organisée</li>
+                    <li data-key="skillSoft2">Rigoureuse</li>
+                    <li data-key="skillSoft3">Dynamique</li>
+                </ul>
+                <hr>
+                <h3 data-key="hardSkillsTitle">Hard Skills</h3>
+                <div class="hard-skills-grid">
+                    <div class="skill-column">
+                        <h3 data-key="skillCat1">Système</h3>
+                        <p>Windows Server (AD, GPO)</p>
+                        <p>Linux (Debian, Ubuntu)</p>
+                        <p>VMware, VirtualBox</p>
+                    </div>
+                    <div class="skill-column">
+                        <h3 data-key="skillCat2">Réseau</h3>
+                        <p>Cisco Packet Tracer</p>
+                        <p>Adressage IPv4/IPv6</p>
+                        <p>VLANs, Routage (OSPF, RIP, Static)</p>
+                        <p>Analyse (Wireshark)</p>
+                        <p>DNS, DHCP, email...</p>
+                    </div>
+                    <div class="skill-column">
+                        <h3 data-key="skillCat4">Cybersécurité</h3>
+                        <p>Stormshield</p>
+                        <p>Pare-feu (Pfsense, ACLs)</p>
+                        <p>Analyse de logs</p>
+                        <p>Audit de sécurité</p>
+                        <p>Nmap</p>
+                    </div>
+                    <div class="skill-column">
+                        <h3 data-key="skillCat3">Codage</h3>
+                        <p>Python</p>
+                        <p>HTML / CSS / JavaScript</p>
+                    </div>
+                    <div class="skill-column">
+                        <h3 data-key="skillCat4">Autre</h3>
+                        <p>RGPD</p>
+                        <p>Gemini</p>
+                        <p>Chat GPT</p>
+                        <p>Github</p>
                     </div>
                 </div>
-            </div>
+            </section>
 
             <section id="certifications" class="card">
                 <h2 data-key="certificationsTitle">Certifications</h2>
@@ -151,12 +147,12 @@ Cette première année a aussi été riche en défis. Face à une charge de trav
                 <div class="item">
                     <h3 data-key="project3_title">Windows Server 2008 R2</h3>
                     <p data-key="project3_desc">Le but de ce TP était de découvrir comment parametrer un serveur et ses fonctionnalitées de base. C'est sur un serveur de 2008 car ca suffisait a ma professeur pour l'utilisation qu'on allait faire</p>
-                    <a href="https://github.com/candicevialette/serveurR2008" target="_blank" class="project-link" data-key="project_link_text">Voir le projet sur GitHub <i data-feather="external-link"></i></a>
+                    <a href="https://github.com/candicevialette/serveurR2008" target="_blank" class="project-link" data-key="project_link_text">Voir le projet sur GitHub</a>
                 </div><hr>
                 <div class="item">
                     <h3 data-key="project4_title">Analyse de risques</h3>
                     <p data-key="project4_desc">Le but de ce TP est d'apprendre à réaliser une analyse des différents facteurs de riques de piratage dans une entreprise.</p>
-                    <a href="https://github.com/candicevette/analyse-de-risques" target="_blank" class="project-link" data-key="project_link_text">Voir le projet sur GitHub <i data-feather="external-link"></i></a>
+                    <a href="https://github.com/candicevialette/analyse-de-risques" target="_blank" class="project-link" data-key="project_link_text">Voir le projet sur GitHub <i data-feather="external-link"></i></a>
                 </div><hr>
                 <div class="item">
                     <h3 data-key="project5_title">Création d'un réseau entier sous Cisco Packet Tracert</h3>
@@ -170,14 +166,9 @@ Cette première année a aussi été riche en défis. Face à une charge de trav
                 <div class="item"><h3 data-key="edu1_title">BTS SIO SISR</h3><p>Lycée Algoud Laffemas <span class="date" data-key="edu1_date">En cours</span></p></div>
                 <div class="item"><h3 data-key="edu2_title">Bac général</h3><p>Lycée Vincent d'Indy <span class="date">2021 - 2024</span></p></div>
                 <hr>
-                <div class="item"><h3 data-key="exp1_title">Mégao (Stage) - 2025</h3><p data-key="exp1_desc">Découvrir le métier de technicien IT en participant aux missions quotidiennes de
-l'équipe. Mettre en application mes connaissances en systèmes et réseaux.</p></div>
-                <div class="item"><h3 data-key="exp2_title">GAEC de la chataigneraie (Saisonnier) (2021-2024)</h3><p data-key="exp2_desc">Un travail saisonnier qui demande beaucoup de rigueur, de patience et de
-concentration.</p></div>
-                <div class="item"><h3 data-key="exp3_title">Dépannage informatique (Bénévolat)</h3><p data-key="exp3_desc">Une première expérience pratique où j'
-ai appris à diagnostiquer et à résoudre les
-problèmes de connectivité et les pannes logicielles sur des ordinateurs Windows.
-</p></div>
+                <div class="item"><h3 data-key="exp1_title">Mégao (Stage) - 2025</h3><p data-key="exp1_desc">Découvrir le métier de technicien IT en participant aux missions quotidiennes de l'équipe. Mettre en application mes connaissances en systèmes et réseaux.</p></div>
+                <div class="item"><h3 data-key="exp2_title">GAEC de la chataigneraie (Saisonnier) (2021-2024)</h3><p data-key="exp2_desc">Un travail saisonnier qui demande beaucoup de rigueur, de patience et de concentration.</p></div>
+                <div class="item"><h3 data-key="exp3_title">Dépannage informatique (Bénévolat)</h3><p data-key="exp3_desc">Une première expérience pratique où j'ai appris à diagnostiquer et à résoudre les problèmes de connectivité et les pannes logicielles sur des ordinateurs Windows.</p></div>
             </section>
 
         </main>
