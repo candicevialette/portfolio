@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <title data-key="pageTitle">Candice Vialette | Portfolio</title>
     
     <link rel="stylesheet" href="css/style.css">
@@ -16,14 +16,15 @@
 </head>
 <body>
 
-    <!-- NOUVELLE BARRE DE NAVIGATION -->
+    <!-- Barre de Navigation -->
     <nav class="navbar">
         <div class="navbar-container">
             <a href="#" class="logo">Candice Vialette</a>
             <ul class="nav-links">
-                <li><a href="#about-me">Qui suis-je ?</a></li>
+                <li><a href="#about-me">Qui suis-je</a></li>
                 <li><a href="#carte-projet">Ce que je veux faire plus tard</a></li>
-                <li><a href="#info-skills">Infos & Compétences</a></li>
+                <li><a href="#info">Infos</a></li>
+		<li><a href="#skills">Compétences</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#projects">Mes projets</a></li>
                 <li><a href="#experience">Formations & Expériences</a></li>
@@ -46,7 +47,7 @@
             
             <div class="button-group">
                 <a href="image/cv.pdf" target="_blank" class="cta-button" data-key="heroButtonCV">Télécharger mon CV</a>
-                <a href="image/lettremotivation.pdf" target="_blank" class="cta-button" data-key="heroButtonLM">Lettre de Motivation</a>
+                <a href="image/lettremotivation.pdf" target="_blank" class="cta-button" data-key="heroButtonLM">Télécharger ma lettre de Motivation</a>
             </div>
         </header>
 
@@ -65,8 +66,7 @@ Cette première année a aussi été riche en défis. Face à une charge de trav
                  <p>J'aimerai continuer mes études en troisième année orienter système et réseaux, j'ai vu qu'intégrer le BUT RT 3° année était une très belle opportunité mais j'ai pas plus chercher. J'aimerai, à terme À plus long terme, je vise un diplôme de niveau Bac+5. Mon projet est encore en construction, mais je suis convaincue de vouloir évoluer vers des postes à plus haute technicité ou à responsabilités. Je m'informe grace à aux missions et aux personnes d'Ingé +.</p>
             </section>
             
-            <!-- AJOUT D'UN ID ICI POUR LE LIEN DE NAVIGATION -->
-            <div class="grid-container" id="info-skills">
+            <div class="grid-container" id="info">
                 <div class="card" id="carte-infos">
                     <h2 data-key="infoTitle">Informations</h2>
                     <ul class="contact-list">
@@ -76,12 +76,53 @@ Cette première année a aussi été riche en défis. Face à une charge de trav
                     </ul>
                 </div>
                 
-                <div class="card">
+                <!-- CARTE COMPÉTENCES MODIFIÉE -->
+                <div class="card" id="skills">
                     <h2 data-key="skillsTitle">Compétences</h2>
                     <h3 data-key="softSkillsTitle">Soft Skills</h3>
-                    <ul><li data-key="skillSoft1">Organisée</li><li data-key="skillSoft2">Rigoureuse</li><li data-key="skillSoft3">Dynamique</li></ul>
+                    <ul>
+                        <li data-key="skillSoft1">Organisée</li>
+                        <li data-key="skillSoft2">Rigoureuse</li>
+                        <li data-key="skillSoft3">Dynamique</li>
+                    </ul>
+                    <hr>
                     <h3 data-key="hardSkillsTitle">Hard Skills</h3>
-                    <ul><li data-key="skillHard1">Windows 10, 11</li><li data-key="skillHard2">Cisco Packet Tracer</li><li data-key="skillHard3">Stormshield</li><li data-key="skillHard4">Debian</li></ul>
+                    <!-- NOUVELLE GRILLE POUR LES HARD SKILLS -->
+                    <div class="hard-skills-grid">
+                        <div class="skill-column">
+                            <h3 data-key="skillCat1">Système</h3>
+                            <p>Windows Server (AD, GPO)</p>
+                            <p>Linux (Debian, Ubuntu)</p>
+                            <p>VMware, VirtualBox</p>
+                        </div>
+                        <div class="skill-column">
+                            <h3 data-key="skillCat2">Réseau</h3>
+                            <p>Cisco Packet Tracer</p>
+                            <p>Adressage IPv4/IPv6</p>
+                            <p>VLANs, Routage (OSPF, RIP, Static)</p>
+                            <p>Analyse (Wireshark)</p>
+                            <p>DNS, DHCP, email...</p>
+                        </div>
+                        <div class="skill-column">
+                            <h3 data-key="skillCat4">Cybersécurité</h3>
+                            <p>Stormshield</p>
+                            <p>Pare-feu (Pfsense, ACLs)</p>
+                            <p>Analyse de logs</p>
+                            <p>Audit de sécurité</p>
+			<p>Nmap</p>
+                        </div>
+                        <div class="skill-column">
+                            <h3 data-key="skillCat3">Codage</h3>
+                            <p>Python</p>
+                            <p>HTML / CSS / JavaScript</p>
+			<div class="skill-column">
+                            <h3 data-key="skillCat4">Autre</h3>
+                            <p>RGPD</p>
+                            <p>Gemini</p>
+			<p>Chat GPT</p>
+			<p>Github</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -94,7 +135,7 @@ Cette première année a aussi été riche en défis. Face à une charge de trav
                 </div>
             </section>
             
-                        <section id="projects" class="card">
+             <section id="projects" class="card">
                 <h2 data-key="projectsTitle">Mes projets</h2>
                 
                 <div class="item">
@@ -126,10 +167,8 @@ Cette première année a aussi été riche en défis. Face à une charge de trav
                     <p data-key="project5_desc">Le but de ce tp est de nous apprendre à créer un réseau type assez complet de a à z.</p>
                     <a href="https://github.com/candicevialette/r-seau" target="_blank" class="project-link" data-key="project_link_text">Voir le projet sur GitHub <i data-feather="external-link"></i></a>
                 </div>
-                
-            </section>
             
-            <section id="experience" class="card">
+           <section id="experience" class="card">
                 <h2 data-key="experienceTitle">Formations & Expériences</h2>
                 <div class="item"><h3 data-key="edu1_title">BTS SIO SISR</h3><p>Lycée Algoud Laffemas <span class="date" data-key="edu1_date">En cours</span></p></div>
                 <div class="item"><h3 data-key="edu2_title">Bac général</h3><p>Lycée Vincent d'Indy <span class="date">2021 - 2024</span></p></div>
@@ -143,6 +182,7 @@ ai appris à diagnostiquer et à résoudre les
 problèmes de connectivité et les pannes logicielles sur des ordinateurs Windows.
 </p></div>
             </section>
+
 
         </main>
     </div>
