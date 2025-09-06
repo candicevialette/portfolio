@@ -8,17 +8,49 @@
     --font-serif: 'Lora', serif;
     --font-sans: 'Montserrat', sans-serif;
 }
-html { scroll-behavior: smooth; }
-body { font-family: var(--font-sans); margin: 0; color: var(--text-color); background-color: var(--light-bg); line-height: 1.7; }
-h1, h2, h3 { font-family: var(--font-serif); font-weight: 400; }
-ul { list-style: none; padding-left: 0; margin: 0; }
-a { color: inherit; text-decoration: none; }
-hr { border: 0; border-top: 1px solid #eee; margin: 25px 0; }
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+body { 
+    font-family: var(--font-sans); 
+    margin: 0; 
+    color: var(--text-color); 
+    background-color: var(--light-bg); 
+    line-height: 1.7; 
+}
+
+h1, h2, h3 { 
+    font-family: var(--font-serif); 
+    font-weight: 400; 
+}
+
+ul { 
+    list-style: none; 
+    padding-left: 0; 
+    margin: 0; 
+}
+
+a { 
+    color: inherit; 
+    text-decoration: none; 
+}
+
+hr { 
+    border: 0; 
+    border-top: 1px solid #eee; 
+    margin: 25px 0; 
+}
 
 /* --- Conteneur Principal --- */
-.page-container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+.page-container { 
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
 
-/* --- NOUVEAU : Section Héro --- */
+/* --- Section Héro --- */
 .hero {
     display: flex;
     flex-direction: column;
@@ -27,57 +59,180 @@ hr { border: 0; border-top: 1px solid #eee; margin: 25px 0; }
     padding: 60px 0;
     position: relative;
 }
-.profile-picture { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 4px solid var(--accent-color); }
-.hero h1 { font-size: 3.5em; margin: 10px 0; color: var(--accent-color); }
-.hero .subtitle { font-size: 1.5em; margin: 0 0 30px 0; font-family: var(--font-serif); font-style: italic; }
 
-/* --- NOUVEAU : Groupe de boutons --- */
-.button-group { display: flex; gap: 15px; }
+.profile-picture { 
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-bottom: 20px; 
+    border: 4px solid var(--accent-color); 
+}
+
+.hero h1 { 
+    font-size: 3.5em; 
+    margin: 10px 0; 
+    color: var(--accent-color); 
+}
+
+.hero .subtitle { 
+    font-size: 1.5em; 
+    margin: 0 0 30px 0; 
+    font-family: var(--font-serif); 
+    font-style: italic; 
+}
+
+/* --- Groupe de boutons --- */
+.button-group { 
+    display: flex; 
+    gap: 15px; 
+}
+
 .cta-button {
     background-color: var(--accent-color);
-    color: var(--light-text) !important; /* Pour s'assurer que le texte est blanc */
+    color: var(--light-text) !important;
     padding: 12px 25px;
     border-radius: 25px;
     font-weight: 500;
     transition: transform 0.3s, background-color 0.3s;
 }
-.cta-button:hover { background-color: #c49991; transform: translateY(-3px); }
 
-/* --- Sélecteur de langue (positionné dans le Héro) --- */
-.lang-switcher { position: absolute; top: 20px; right: 0; }
-.lang-switcher button { background: none; border: none; cursor: pointer; font-size: 1em; font-weight: 500; color: #aaa; padding: 5px; transition: color 0.3s; }
-.lang-switcher button.active { color: var(--accent-color); font-weight: bold; }
-.lang-switcher span { color: #ccc; margin: 0 5px; }
+.cta-button:hover { 
+    background-color: #c49991; 
+    transform: translateY(-3px); 
+}
+
+/* --- Sélecteur de langue --- */
+.lang-switcher { 
+    position: absolute; 
+    top: 20px; 
+    right: 0; 
+}
+
+.lang-switcher button { 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 1em; 
+    font-weight: 500; 
+    color: #aaa; 
+    padding: 5px; 
+    transition: color 0.3s; 
+}
+
+.lang-switcher button.active { 
+    color: var(--accent-color); 
+    font-weight: bold; 
+}
+
+.lang-switcher span { 
+    color: #ccc; 
+    margin: 0 5px; 
+}
 
 /* --- Système de Cartes et Grille --- */
-.card { background-color: var(--card-bg); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; }
+.card { 
+    background-color: var(--card-bg); 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    margin-bottom: 30px; 
+}
+
 .card h2 {
     font-size: 1.8em;
-    color: var(--accent-color); /* Titres en rose */
+    color: var(--accent-color);
     padding-bottom: 15px;
     border-bottom: 1px solid #eee;
     margin-top: 0;
     margin-bottom: 20px;
 }
-.card h3 { font-size: 1.1em; font-family: var(--font-sans); font-weight: 500; margin-top: 20px; }
-.grid-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+
+.card h3 { 
+    font-size: 1.1em; 
+    font-family: var(--font-sans); 
+    font-weight: 500; 
+    margin-top: 20px; 
+}
+
+/* -- AJOUTÉ -- Pour augmenter la hauteur de la première carte */
+/* (N'oubliez pas d'ajouter id="carte-projet" à la div de cette carte dans votre HTML) */
+#carte-projet {
+    min-height: 100px; /* Ajustez cette valeur si nécessaire */
+}
+
+/* -- MODIFIÉ -- Pour ajuster la grille des cartes "Informations" et "Compétences" */
+.grid-container { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px; 
+    align-items: start; /* Empêche les cartes de s'étirer pour avoir la même hauteur */
+    margin-bottom: 20px; /* Augmente l'espace beige sous cette section */
+}
 
 /* --- Section Certifications --- */
-.certifications-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.cert-column h3 { font-family: var(--font-serif); font-size: 1.1em; color: var(--text-color); margin: 0 0 10px 0; font-weight: 500; }
-.cert-column p { font-family: var(--font-sans); font-size: 1em; margin: 5px 0; }
+.certifications-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+}
+
+.cert-column h3 { 
+    font-family: var(--font-serif); 
+    font-size: 1.1em; 
+    color: var(--text-color); 
+    margin: 0 0 10px 0; 
+    font-weight: 500; 
+}
+
+.cert-column p { 
+    font-family: var(--font-sans); 
+    font-size: 1em; 
+    margin: 5px 0; 
+}
 
 /* --- Section Informations (Contact) --- */
-.contact-list li { display: flex; align-items: center; margin-bottom: 15px; }
-.contact-list i { width: 20px; height: 20px; margin-right: 12px; color: var(--accent-color); }
-.contact-list a:hover { color: var(--accent-color); }
+.contact-list li { 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 15px; 
+}
+
+.contact-list i { 
+    width: 20px; 
+    height: 20px; 
+    margin-right: 12px; 
+    color: var(--accent-color); 
+}
+
+.contact-list a:hover { 
+    color: var(--accent-color); 
+}
 
 /* --- Styles des items (Formation, Expérience) --- */
-.item { margin-bottom: 20px; }
-.item:last-child { margin-bottom: 0; }
-.item h3 { margin: 0 0 5px 0; font-size: 1.2em; font-family: var(--font-serif); }
-.item p { margin: 0; }
-.date { float: right; font-style: italic; color: #888; }
+.item { 
+    margin-bottom: 20px; 
+}
+
+.item:last-child { 
+    margin-bottom: 0; 
+}
+
+.item h3 { 
+    margin: 0 0 5px 0; 
+    font-size: 1.2em; 
+    font-family: var(--font-serif); 
+}
+
+.item p { 
+    margin: 0; 
+}
+
+.date { 
+    float: right; 
+    font-style: italic; 
+    color: #888; 
+}
 
 /* --- Pied de page --- */
 footer {
@@ -90,9 +245,21 @@ footer {
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-    .grid-container { grid-template-columns: 1fr; }
-    .certifications-grid { grid-template-columns: 1fr; gap: 25px; }
-    .hero h1 { font-size: 2.8em; }
-    .hero .subtitle { font-size: 1.2em; }
-    .button-group { flex-direction: column; width: 100%; }
+    .grid-container { 
+        grid-template-columns: 1fr; 
+    }
+    .certifications-grid { 
+        grid-template-columns: 1fr; 
+        gap: 25px; 
+    }
+    .hero h1 { 
+        font-size: 2.8em; 
+    }
+    .hero .subtitle { 
+        font-size: 1.2em; 
+    }
+    .button-group { 
+        flex-direction: column; 
+        width: 100%; 
+    }
 }
