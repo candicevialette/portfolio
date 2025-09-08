@@ -67,7 +67,7 @@ const translations = {
     en: {
         navAbout: "About me",
         navFuture: "What I want to do later",
-        navObjective: "Objective",
+        navObjective: "Objectives",
         navInfo: "Info",
         navSkills: "Skills",
         navCerts: "Certifications",
