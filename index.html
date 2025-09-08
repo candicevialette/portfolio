@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio VIALETTE</title>
     
     <link rel="stylesheet" href="css/style.css">
@@ -18,50 +18,57 @@
         <div class="navbar-container">
             <a href="#" class="logo">Candice VIALETTE</a>
             <ul class="nav-links">
-                <li><a href="#about-me">Qui suis-je</a></li>
-                <li><a href="#carte-projet">Ce que je veux faire plus tard</a></li>
-				<li><a href="#objectif">Objectif</a></li>
-                <li><a href="#info">Infos</a></li>
-		        <li><a href="#skills">Compétences</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#projects">Mes projets</a></li>
-                <li><a href="#experience">Formations & Expériences</a></li>
+                <li><a href="#about-me" data-key="navAbout">Qui suis-je</a></li>
+                <li><a href="#carte-projet" data-key="navFuture">Ce que je veux faire plus tard</a></li>
+				<li><a href="#objectif" data-key="navObjective">Objectif</a></li>
+                <li><a href="#info" data-key="navInfo">Infos</a></li>
+		        <li><a href="#skills" data-key="navSkills">Compétences</a></li>
+                <li><a href="#certifications" data-key="navCerts">Certifications</a></li>
+                <li><a href="#projects" data-key="navProjects">Mes projets</a></li>
+                <li><a href="#experience" data-key="navExperience">Formations & Expériences</a></li>
             </ul>
         </div>
     </nav>
 
       <div class="page-container">
             <header class="hero">
-            <img src="image/photo.png" alt="Photo de Candice Vialette" class="profile-picture">
-            <h1 data-key="heroName">Candice Vialette</h1>
-            <p class="subtitle" data-key="heroSubtitle">Étudiante en système et réseaux</p>
-            
-            <div class="button-group">
-                <a href="image/cv.pdf" target="_blank" class="cta-button" data-key="heroButtonCV">Télécharger mon CV</a>
-                <a href="image/lettremotivation.pdf" target="_blank" class="cta-button" data-key="heroButtonLM">Télécharger ma lettre de Motivation</a>
-            </div>
+                <img src="image/photo.png" alt="Photo de Candice Vialette" class="profile-picture">
+                <h1 data-key="heroName">Candice Vialette</h1>
+                <p class="subtitle" data-key="heroSubtitle">Étudiante en système et réseaux</p>
+                
+                <div class="button-group">
+                    <a href="image/cv.pdf" target="_blank" class="cta-button" data-key="heroButtonCV">Télécharger mon CV</a>
+                    <a href="image/lettremotivation.pdf" target="_blank" class="cta-button" data-key="heroButtonLM">Télécharger ma lettre de Motivation</a>
+                </div>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button id="lang-fr">FR</button>
+                    <span>|</span>
+                    <button id="lang-en">EN</button>
+                </div>
         </header>
 
         <main>
             <section id="about-me" class="card">
-                <h2>Qui suis-je ?</h2>
-                <p>Je suis une étudiante curieuse et déterminée, et ma première année en BTS SIO a confirmé ma passion naissante pour les systèmes et les réseaux.<br><br>
+                <h2 data-key="aboutTitle">Qui suis-je ?</h2>
+                <p data-key="aboutText">Je suis une étudiante curieuse et déterminée, et ma première année en BTS SIO a confirmé ma passion naissante pour les systèmes et les réseaux.<br><br>
 				J'ai particulièrement apprécié les aspects pratiques de la formation : concevoir des architectures sur Cisco Packet Tracer, déployer des services sur des serveurs et donner vie à une infrastructure. C'est en pratiquant et faisant des erreurs que j'apprends le plus.<br><br>
 				Cette première année a aussi été riche en défis. Face à une charge de travail importante ou à des projets où il fallait être totalement autonome, j'ai appris à m'organiser, à chercher les solutions par moi-même et à faire pour deux le travail. <br><br>Ces situations, bien que parfois difficiles, m'ont surtout rendue plus efficace et plus débrouillarde.</p>
             </section>
             
             <section class="card" id="carte-projet">
-                 <h2>Ce que je veux faire plus tard</h2>
-                 <p>J'aspire à un parcours de formation jusqu'au niveau Bac+5 pour accéder à des postes à responsabilités en tant qu'Administratrice Systèmes ou Réseaux. Ce qui me motive particulièrement est la possibilité de concevoir et de diriger des projets d'infrastructure concrets en maîtrisant en les maitrisant en totalité.
+                 <h2 data-key="futureTitle">Ce que je veux faire plus tard</h2>
+                 <p data-key="futureText">J'aspire à un parcours de formation jusqu'au niveau Bac+5 pour accéder à des postes à responsabilités en tant qu'Administratrice Systèmes ou Réseaux. Ce qui me motive particulièrement est la possibilité de concevoir et de diriger des projets d'infrastructure concrets en maîtrisant en les maitrisant en totalité.
 				<br><br>En parallèle, je souhaite enrichir mon parcours par une expérience d'un ou deux ans à l'étranger. Je suis convaincue que découvrir de nouvelles approches techniques et culturelles est un atout indispensable pour développer une vision globale et une grande capacité d'adaptation.
 				</p>
             </section>
 
 		<section class="card" id="objectif">
-                <h2>Mes Objectifs</h2>
+                <h2 data-key="objectiveTitle">Mes Objectifs</h2>
                 <div class="item">
-                    <h3>Poursuite d'études en alternance (Bac+3)</h3>
-                    <p>Mon objectif principal est d'intégrer une troisième année de BUT Réseaux et Télécommunications en alternance. Je veux aborder des missions plus techniques et avoir plus de responsabilités. 
+                    <h3 data-key="objectiveSubTitle">Poursuite d'études en alternance (Bac+3)</h3>
+                    <p data-key="objectiveText">Mon objectif principal est d'intégrer une troisième année de BUT Réseaux et Télécommunications en alternance. Je veux aborder des missions plus techniques et avoir plus de responsabilités. 
 					<br><br>Pour cela, je dois d'abord valider mon BTS SIO cette année, en me concentrant sur les projets finaux pour avoir une base solide. 
 					<br><br>Mon stage chez Mégao ayant été une très bonne expérience, je chercherai en priorité à les rejoindre pour cette alternance.
 					</p>
@@ -69,7 +76,7 @@
             </section>
 			
             <section class="card" id="info">
-                <h2>Informations</h2>
+                <h2 data-key="infoTitle">Informations</h2>
                 <ul class="contact-list">
                     <li><a href="https://www.linkedin.com/in/candice-v-ba28b933b/" target="_blank"><i data-feather="linkedin"></i><span>LinkedIn</span></a></li>
                     <li><a href="mailto:candice.vialette@gmail.com"><i data-feather="mail"></i><span>candice.vialette@gmail.com</span></a></li>
@@ -78,45 +85,45 @@
             </section>
             
             <section class="card" id="skills">
-                <h2>Compétences</h2>
-                <h3>Soft Skills</h3>
+                <h2 data-key="skillsTitle">Compétences</h2>
+                <h3 data-key="softSkillsTitle">Soft Skills</h3>
                 <ul>
-                    <li>Organisée</li>
-                    <li>Rigoureuse</li>
-                    <li>Dynamique</li>
+                    <li data-key="skillOrganized">Organisée</li>
+                    <li data-key="skillRigorous">Rigoureuse</li>
+                    <li data-key="skillDynamic">Dynamique</li>
                 </ul>
                 <hr>
-                <h3>Hard Skills</h3>
+                <h3 data-key="hardSkillsTitle">Hard Skills</h3>
                 <div class="hard-skills-grid">
                     <div class="skill-column">
-                        <h3>Système</h3>
+                        <h3 data-key="systemTitle">Système</h3>
                         <p>Windows Server (AD, GPO)</p>
                         <p>Linux (Debian, Ubuntu)</p>
                         <p>VMware, VirtualBox</p>
                     </div>
                     <div class="skill-column">
-                        <h3>Réseau</h3>
+                        <h3 data-key="networkTitle">Réseau</h3>
                         <p>Cisco Packet Tracer</p>
                         <p>Adressage IPv4/IPv6</p>
                         <p>VLANs, Routage (OSPF, RIP, Static)</p>
-                        <p>Analyse (Wireshark)</p>
+                        <p data-key="skillAnalysis">Analyse (Wireshark)</p>
                         <p>DNS, DHCP, email...</p>
                     </div>
                     <div class="skill-column">
-                        <h3>Cybersécurité</h3>
+                        <h3 data-key="cybersecurityTitle">Cybersécurité</h3>
                         <p>Stormshield</p>
-                        <p>Pare-feu (Pfsense, ACLs)</p>
-                        <p>Analyse de logs</p>
-                        <p>Audit de sécurité</p>
+                        <p data-key="skillFirewall">Pare-feu (Pfsense, ACLs)</p>
+                        <p data-key="skillLogs">Analyse de logs</p>
+                        <p data-key="skillAudit">Audit de sécurité</p>
                         <p>Nmap</p>
                     </div>
                     <div class="skill-column">
-                        <h3>Codage</h3>
+                        <h3 data-key="codingTitle">Codage</h3>
                         <p>Python</p>
                         <p>HTML / CSS / JavaScript</p>
                     </div>
                     <div class="skill-column">
-                        <h3>Autre</h3>
+                        <h3 data-key="otherTitle">Autre</h3>
                         <p>RGPD</p>
                         <p>Gemini</p>
                         <p>Chat GPT</p>
@@ -126,70 +133,70 @@
             </section>
 
             <section id="certifications" class="card">
-                <h2>Certifications</h2>
+                <h2 data-key="certsTitle">Certifications</h2>
                 <div class="certifications-grid">
-                    <div class="cert-column"><h3>AUTRES :</h3><p>RGPD (CNIL)</p><p>Pix (500 points)</p><p>PSC1</p></div>
-                    <div class="cert-column"><h3>RÉSEAU :</h3><p>CCNA 1</p></div>
-                    <div class="cert-column"><h3>CYBERSÉCURITÉ :</h3><p>Sécurité des terminaux</p><p>Introduction à la Cybersécurité</p><p>CyberOps</p></div>
+                    <div class="cert-column"><h3 data-key="certsOther">AUTRES :</h3><p>RGPD (CNIL)</p><p>Pix (500 points)</p><p>PSC1</p></div>
+                    <div class="cert-column"><h3 data-key="certsNetwork">RÉSEAU :</h3><p>CCNA 1</p></div>
+                    <div class="cert-column"><h3 data-key="certsCyber">CYBERSÉCURITÉ :</h3><p data-key="certTerminal">Sécurité des terminaux</p><p data-key="certIntroCyber">Introduction à la Cybersécurité</p><p>CyberOps</p></div>
                 </div>
             </section>
             
              <section id="projects" class="card">
-                <h2>Mes projets</h2>
+                <h2 data-key="projectsTitle">Mes projets</h2>
                 <div class="item">
-                    <h3>Montage d’un pare‑feu</h3>
-                    <p>Le but de cette tache en stage est de remplacer un stormshield tout en renforcant la sécurité.</p>
-                    <a href="https://github.com/candicevialette/stormshield" target="_blank" class="project-link">Voir le projet sur GitHub</a>
+                    <h3 data-key="projectFirewallTitle">Montage d’un pare‑feu</h3>
+                    <p data-key="projectFirewallText">Le but de cette tache en stage est de remplacer un stormshield tout en renforcant la sécurité.</p>
+                    <a href="https://github.com/candicevialette/stormshield" target="_blank" class="project-link" data-key="projectLink">Voir le projet sur GitHub</a>
                 </div><hr>
                 <div class="item">
-                    <h3>Site internet (en cours de réalisation)</h3>
-                    <p>Le but de cette AP est de fournir au client un developpement de son entreprise en créant un site internet pour que des nouveaux client tombent dessus, bien sur a revoir cette reformulation.</p>
-                    <a href="https://candicevialette.github.io/vosreves//index.html" target="_blank" class="project-link">Voir le site internet</a>
+                    <h3 data-key="projectWebTitle">Site internet (en cours de réalisation)</h3>
+                    <p data-key="projectWebText">Le but de cette AP est de fournir au client un developpement de son entreprise en créant un site internet pour que des nouveaux client tombent dessus, bien sur a revoir cette reformulation.</p>
+                    <a href="https://candicevialette.github.io/vosreves//index.html" target="_blank" class="project-link" data-key="projectSiteLink">Voir le site internet</a>
                 </div><hr>
                 <div class="item">
-                    <h3>Windows Server 2008 R2</h3>
-                    <p>Le but de ce TP était de découvrir comment parametrer un serveur et ses fonctionnalitées de base. C'est sur un serveur de 2008 car ca suffisait a ma professeur pour l'utilisation qu'on allait faire.</p>
-                    <a href="https://github.com/candicevialette/serveurR2008" target="_blank" class="project-link">Voir le projet sur GitHub</a>
+                    <h3 data-key="projectWinServerTitle">Windows Server 2008 R2</h3>
+                    <p data-key="projectWinServerText">Le but de ce TP était de découvrir comment parametrer un serveur et ses fonctionnalitées de base. C'est sur un serveur de 2008 car ca suffisait a ma professeur pour l'utilisation qu'on allait faire.</p>
+                    <a href="https://github.com/candicevialette/serveurR2008" target="_blank" class="project-link" data-key="projectLink">Voir le projet sur GitHub</a>
                 </div><hr>
                 <div class="item">
-                    <h3>Analyse de risques</h3>
-                    <p>Le but de ce TP est d'apprendre à réaliser une analyse des différents facteurs de riques de piratage dans une entreprise.</p>
-                    <a href="https://github.com/candicevialette/analyse-de-risques" target="_blank" class="project-link">Voir le projet sur GitHub</a>
+                    <h3 data-key="projectRiskTitle">Analyse de risques</h3>
+                    <p data-key="projectRiskText">Le but de ce TP est d'apprendre à réaliser une analyse des différents facteurs de riques de piratage dans une entreprise.</p>
+                    <a href="https://github.com/candicevialette/analyse-de-risques" target="_blank" class="project-link" data-key="projectLink">Voir le projet sur GitHub</a>
                 </div><hr>
                 <div class="item">
-                    <h3>Création d'un réseau entier sous Cisco Packet Tracert</h3>
-                    <p>Le but de ce tp est de nous apprendre à créer un réseau type assez complet de a à z.</p>
-                    <a href="https://github.com/candicevialette/r-seau" target="_blank" class="project-link">Voir le projet sur GitHub</a>
+                    <h3 data-key="projectCiscoTitle">Création d'un réseau entier sous Cisco Packet Tracert</h3>
+                    <p data-key="projectCiscoText">Le but de ce tp est de nous apprendre à créer un réseau type assez complet de a à z.</p>
+                    <a href="https://github.com/candicevialette/r-seau" target="_blank" class="project-link" data-key="projectLink">Voir le projet sur GitHub</a>
                 </div>
             </section>
             
            <section id="experience" class="card">
-                <h2>Formations & Expériences</h2>
+                <h2 data-key="experienceTitle">Formations & Expériences</h2>
                 <div class="item">
-                    <span class="date">En cours</span>
+                    <span class="date" data-key="dateCurrent">En cours</span>
                     <h3>BTS SIO SISR</h3>
                     <p>Lycée Algoud Laffemas</p>
                 </div>
                 <div class="item">
                     <span class="date">2021 - 2024</span>
-                    <h3>Bac général</h3>
+                    <h3 data-key="expBac">Bac général</h3>
                     <p>Lycée Vincent d'Indy</p>
                 </div>
                 <hr>
                 <div class="item">
                     <span class="date">2025</span>
-                    <h3>Mégao (Stage)</h3>
-                    <p>Découvrir le métier de technicien IT en participant aux missions quotidiennes de l'équipe. Mettre en application mes connaissances en systèmes et réseaux.</p>
+                    <h3 data-key="expInternship">Mégao (Stage)</h3>
+                    <p data-key="expInternshipText">Découvrir le métier de technicien IT en participant aux missions quotidiennes de l'équipe. Mettre en application mes connaissances en systèmes et réseaux.</p>
                 </div>
                 <div class="item">
                     <span class="date">2021 - 2024</span>
-                    <h3>GAEC de la chataigneraie (Saisonnier)</h3>
-                    <p>Un travail saisonnier qui demande beaucoup de rigueur, de patience et de concentration.</p>
+                    <h3 data-key="expSeasonal">GAEC de la chataigneraie (Saisonnier)</h3>
+                    <p data-key="expSeasonalText">Un travail saisonnier qui demande beaucoup de rigueur, de patience et de concentration.</p>
                 </div>
                 <div class="item">
-                    <span class="date">2018 - aujourd'hui</span>
-                    <h3>Dépannage informatique (Bénévolat)</h3>
-                    <p>Une première expérience pratique où j'ai appris à diagnostiquer et à résoudre les problèmes de connectivité et les pannes logicielles sur des ordinateurs Windows.</p>
+                    <span class="date" data-key="datePresent">2018 - aujourd'hui</span>
+                    <h3 data-key="expVolunteering">Dépannage informatique (Bénévolat)</h3>
+                    <p data-key="expVolunteeringText">Une première expérience pratique où j'ai appris à diagnostiquer et à résoudre les problèmes de connectivité et les pannes logicielles sur des ordinateurs Windows.</p>
                 </div>
             </section>
 
@@ -198,7 +205,10 @@
     
     <footer>
     </footer>
-
+    
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/app.js"></script>
     <script>
       feather.replace()
     </script>
