@@ -54,11 +54,9 @@ hr {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* -- MODIFIÉ -- Pour que la nav-bar prenne toute la largeur */
 .navbar-container {
-    /* max-width: 900px; <-- Ligne supprimée */
-    margin: 0 auto;
-    padding: 0 40px; /* Augmentation du padding pour un meilleur espacement */
+     margin: 0 auto;
+    padding: 0 40px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,7 +80,7 @@ hr {
     padding: 8px 12px;
     border-radius: 6px;
     transition: background-color 0.3s;
-    white-space: nowrap; /* Empêche les liens de passer à la ligne */
+    white-space: nowrap; 
 }
 
 .nav-links a:hover {
@@ -150,10 +148,8 @@ hr {
 }
 
 /* --- Sélecteur de langue --- */
-.lang-switcher { 
-    position: absolute; 
-    top: 20px; 
-    right: 0; 
+.lang-switcher {
+    margin-top: 25px; /* Ajoute de l'espace au-dessus */
 }
 
 .lang-switcher button { 
@@ -167,9 +163,8 @@ hr {
     transition: color 0.3s; 
 }
 
-.lang-switcher button.active { 
-    color: var(--accent-color); 
-    font-weight: bold; 
+.lang-switcher button:hover {
+    color: var(--accent-color);
 }
 
 .lang-switcher span { 
