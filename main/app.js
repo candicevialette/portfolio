@@ -27,9 +27,3 @@ const setLanguage = (lang) => {
 // Écouteurs d'événements pour les boutons
 langFrButton.addEventListener('click', () => setLanguage('fr'));
 langEnButton.addEventListener('click', () => setLanguage('en'));
-
-// Au chargement de la page, vérifie s'il y a une langue sauvegardée
-document.addEventListener('DOMContentLoaded', () => {
-    const savedLanguage = localStorage.getItem('language') || 'fr'; // 'fr' par défaut
-    setLanguage(savedLanguage);
-});
