@@ -149,7 +149,7 @@ hr {
 
 /* --- Sélecteur de langue --- */
 .lang-switcher {
-    margin-top: 25px; /* Ajoute de l'espace au-dessus */
+    margin-top: 25px; 
 }
 
 .lang-switcher button { 
